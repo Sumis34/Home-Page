@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Discord from '../../components/Discord/Discord.js'
+//import Discord from '../../components/Discord/Discord.js'
 
 
 export default class Home extends Component {
@@ -9,14 +9,10 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick={this.shoot}>Take the shot!</button>
-                <Discord 
-                    user="SUMIS" 
-                    bot="Test bot" 
-                    command="/user" 
-                />
-            </div>
+            <>
+                {/* <button type="button" className="btn btn-dark" onClick={this.shoot}>Take the shot!</button> */}
+                
+            </>
         )
     }
 }
