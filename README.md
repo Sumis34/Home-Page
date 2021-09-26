@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# Home Page
+## Important to know
+In case this site is not understandable I should have described it here.
+## Trello
+Link to [Trello](https://trello.com/b/4sWMnI6I/home-page).
+## Getting Started with Create React App
+<details>
+    <summary>Click to expand!</summary>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +75,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</details>

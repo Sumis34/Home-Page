@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './home.scss';
 import Header  from '../../components/Header/Header.js'
-import Waves from '../../assets/design-elements/waves-1.svg'
+import Waves from '../../assets/design-elements/waves-5.svg'
 //import Discord from '../../components/Discord/Discord.js'
 
 
