@@ -9,13 +9,23 @@
     font-style: normal;
 }
 
+.title,
+.sub-title {
+    margin-left: 10%;
+}
+
 header {
     min-height: 100vh;
-    height: 140vh;
-    background: url(../../assets/images/bg-main-2.png) center;
+    // height: 140vh;
+    //background: url(../../assets/images/bg-main-2.png) center;
     background-size: cover;
 }
 
-.title {
+.blob {
+    height: 30em;
+    width: 30em;
+}
+
+.col {
     margin: 20vh 0 0 0;
 }
