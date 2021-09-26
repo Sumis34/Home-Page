@@ -3,6 +3,8 @@ nav {
     background-color: transparent;
     text-align: right;
     padding: 20px;
+    position: absolute;
+    width: 100%;
     ul {
         list-style: none;
         li {
@@ -12,7 +14,12 @@ nav {
                 font-size: 1.2em;
                 font-weight: 300;
                 text-decoration: none;
-                color: rgb(248, 39, 39);
+                color: $text-1;
+                transition: .3s;
+                &:hover {
+                    color: $text-hover;
+                    transition: .3s;
+                }
             }
         }
     }
