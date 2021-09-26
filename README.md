@@ -1,8 +1,11 @@
 # Home Page
 ## Important to know
 In case this site is not understandable I should have described it here.
-## Trello
-Link to [Trello](https://trello.com/b/4sWMnI6I/home-page).
+## TODO
+Progress is tracked on [Trello](https://trello.com/b/4sWMnI6I/home-page).
+
+
+
 ## Getting Started with Create React App
 <details>
     <summary>Click to expand!</summary>
