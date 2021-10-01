@@ -14,9 +14,6 @@ export default class Header extends Component {
                         <h1 className="title">Noé Krebs</h1>
                         <h2 className="sub-title">Development and design</h2>
                     </div>
-                    {/* <div className="col col-4">
-                        <img className="blob" src={blob} alt="himmel"/>
-                    </div> */}
                 </div>
             </header>
         );
