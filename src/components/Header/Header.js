@@ -6,6 +6,9 @@ export default class Header extends Component {
     render() {
         return (
             <header>
+                <video src={bg} autoPlay muted loop poster="posterimage.jpg">
+                    Sorry, your browser doesn't support embedded videos
+                </video>
                 <div className="row">
                     <div className="col">
                         <h1 className="title">Noé Krebs</h1>
@@ -15,9 +18,6 @@ export default class Header extends Component {
                         <img className="blob" src={blob} alt="himmel"/>
                     </div> */}
                 </div>
-                <video src={bg} autoPlay muted loop poster="posterimage.jpg">
-                        Sorry, your browser doesn't support embedded videos
-                </video>
             </header>
         );
     }
