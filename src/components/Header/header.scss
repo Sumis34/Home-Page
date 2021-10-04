@@ -12,7 +12,7 @@
 
 .sub-title{
     animation: title-fade-in 1s;
-    animation-delay: .3s;
+    animation-delay: .2s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -47,6 +47,12 @@ video {
 
 .col {
     margin: 25% 0 0 0;
+}
+p{
+    top: 95vh;
+    left: 2em;
+    position: absolute;
+    opacity: .5;
 }
 
 @keyframes simple-fade-in {

@@ -15,6 +15,7 @@ export default class Header extends Component {
                         <h2 className="sub-title">Development and design</h2>
                     </div>
                 </div>
+                {/* <p>47° 1' 41.3544" 7° 24' 47.5194"</p> */}
             </header>
         );
     }
