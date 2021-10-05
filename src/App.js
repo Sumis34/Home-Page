@@ -12,11 +12,13 @@ function App() {
       const favicon = document.getElementById("favicon");
       //Check browser theme
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        favicon.href = "redcircle.png";
+        favicon.href = "./assets/images/nk-logo_bright.png";
+        console.log("Dark");
       }
       //if above 0, we set back to green
       else {
-        favicon.href = "greencircle.png";
+        favicon.href = "./assets/images/nk-logo_dark.png";
+        console.log("Light");
       }
     };
     //run our function here
