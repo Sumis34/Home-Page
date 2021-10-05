@@ -1,10 +1,19 @@
-@import '../../colors.scss';
-nav {
+@import "../../colors.scss";
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-desktop, .nav-mobile {
     z-index: 100;
     background-color: transparent;
     padding: 1.2em;
     position: absolute;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 ul {
@@ -24,20 +33,48 @@ li {
         font-weight: 300;
         text-decoration: none;
         color: $text-1;
-        transition: .3s;
+        transition: 0.3s;
         &:hover {
             color: $text-hover;
-            transition: .3s;
+            transition: 0.3s;
         }
     }
 }
 
 //Logo on left
-li:first-child{
-    margin-right: auto;
-}
+// li:first-child{
+//
+// }
 
-.logo{
+.logo {
     width: 2em;
     height: 2em;
+}
+
+.burger {
+    display: none;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .burger {
+        display: block;
+        font-size: 2em;
+        color: $text-1;
+    }
+    .nav-icons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .nav-mobile{
+        display: block;
+    }
+
+    .nav-desktop{
+        display: none;
+    }
 }
