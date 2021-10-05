@@ -29,7 +29,8 @@ export default class Navbar extends Component {
                     <div className="nav-icons">
                         <Link to="/"><img className="logo" src={logo} alt="logo" /></Link><i className="fas fa-bars burger"></i>
                     </div>
-                    <nav className="mobile">
+                    <nav className="mobile active">
+                        <i className="fas fa-times close"></i>
                         <ul>
                             <li>
                                 <Link to="/">Home</Link>
