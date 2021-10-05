@@ -15,13 +15,13 @@ function App() {
         favicon.href = "./assets/images/nk-logo_bright.png";
         console.log("Dark");
       }
-      //if above 0, we set back to green
+
       else {
         favicon.href = "./assets/images/nk-logo_dark.png";
         console.log("Light");
       }
     };
-    //run our function here
+
     faviconUpdate();
   });
 
