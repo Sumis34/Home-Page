@@ -6,22 +6,37 @@ nav {
     padding: 20px;
     position: absolute;
     width: 100%;
-    ul {
-        list-style: none;
-        li {
-            display: inline-block;
-            padding: 0 1.2rem;
-            a {
-                font-size: 1.2em;
-                font-weight: 300;
-                text-decoration: none;
-                color: $text-1;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    li {
+        display: inline-block;
+        padding: 0 1.2rem;
+        width: fit-content;
+        a {
+            font-size: 1.2em;
+            font-weight: 300;
+            text-decoration: none;
+            color: $text-1;
+            transition: .3s;
+            &:hover {
+                color: $text-hover;
                 transition: .3s;
-                &:hover {
-                    color: $text-hover;
-                    transition: .3s;
-                }
             }
         }
     }
+}
+
+//Logo on left
+li:first-child{
+    margin-right: auto;
+}
+
+.logo{
+    width: 2em;
+    height: 2em;
 }
