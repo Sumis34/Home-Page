@@ -2,8 +2,7 @@
 nav {
     z-index: 100;
     background-color: transparent;
-    text-align: right;
-    padding: 20px;
+    padding: 1.2em;
     position: absolute;
     width: 100%;
 }
@@ -13,20 +12,22 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    li {
-        display: inline-block;
-        padding: 0 1.2rem;
-        width: fit-content;
-        a {
-            font-size: 1.2em;
-            font-weight: 300;
-            text-decoration: none;
-            color: $text-1;
+    gap: 2em;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    width: fit-content;
+    a {
+        font-size: 1.2em;
+        font-weight: 300;
+        text-decoration: none;
+        color: $text-1;
+        transition: .3s;
+        &:hover {
+            color: $text-hover;
             transition: .3s;
-            &:hover {
-                color: $text-hover;
-                transition: .3s;
-            }
         }
     }
 }
