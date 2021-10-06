@@ -25,6 +25,10 @@
     line-height: .9em;
 }
 
+button{
+    z-index: 10;
+    position: relative;
+}
 
 header {
     min-height: 100vh;
