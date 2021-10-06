@@ -1,0 +1,11 @@
+@import '../../colors.scss';
+
+footer{
+    background-color: $bg-medium-grey;
+    height: 30vh;
+}
+
+.top-footer{
+    display: flex;
+    flex-direction: column;
+}
