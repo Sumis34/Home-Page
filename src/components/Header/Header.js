@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './header.scss';
 // import blob from '../../assets/images/blob.png'
 import bg from '../../assets/videos/FebruarWeb-1.m4v'
-export default class Header extends Component {
-    render() {
+export default function Header() {
         return (
             <header>
                 <video src={bg} autoPlay muted loop poster="posterimage.jpg">
@@ -18,5 +17,4 @@ export default class Header extends Component {
                 {/* <p>47° 1' 41.3544" 7° 24' 47.5194"</p> */}
             </header>
         );
-    }
 }
