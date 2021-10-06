@@ -17,8 +17,8 @@ export default function Footer() {
                 </div>
                 <div className="quik">
                     <h2>Quick Links</h2>
-                    <a href="#">FreeTrasfer</a>
-                    <a href="#">Test</a>
+                    <a href="/">FreeTrasfer</a>
+                    <a href="/">Test</a>
                 </div>
             </div>
             <div className="social-media"></div>
