@@ -14,7 +14,7 @@ export default function Home() {
             <Header />
             {/* <img src={Waves} alt="Waves" /> */}
             <Work />
-            <div className="home"></div>
+            <div className="home" id="home"></div>
             <Footer />
         </>
     )

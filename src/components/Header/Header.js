@@ -1,6 +1,6 @@
 import React from 'react'
 import './header.scss';
-import { Link } from "react-router-dom";
+import { HashLink as Link}  from "react-router-hash-link";
 // import blob from '../../assets/images/blob.png'
 import bg from '../../assets/videos/FebruarWeb-1.m4v'
 export default function Header() {
@@ -13,7 +13,7 @@ export default function Header() {
                     <div className="col header-title">
                         <h1 className="title">Noé Krebs</h1>
                         <h2 className="sub-title">Development and design</h2>
-                        <Link to="/users"><button type="button" className="primary">View more</button></Link>
+                        <Link to="/home#home"><button type="button" className="primary">View more</button></Link>
                     </div>
                 </div>
                 {/* <p>47° 1' 41.3544" 7° 24' 47.5194"</p> */}
