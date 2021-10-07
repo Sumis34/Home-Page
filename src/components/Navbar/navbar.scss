@@ -13,7 +13,7 @@ nav {
         gap: 2em;
         padding: 0;
     }
-    
+
     li {
         display: inline-block;
         width: fit-content;
@@ -50,6 +50,10 @@ nav {
     display: none;
 }
 
+.close {
+    visibility: hidden;
+}
+
 @media only screen and (max-width: 600px) {
     .burger {
         display: block;
@@ -65,7 +69,7 @@ nav {
         display: block;
     }
 
-    nav ul{
+    nav ul {
         flex-direction: column;
     }
 
@@ -82,12 +86,13 @@ nav {
         background-color: $bg-medium-grey;
         padding: 2em;
 
-        &.active{
+        &.active {
             transform: translateX(30%);
         }
     }
 
-    .close{
+    .close {
+        visibility: visible;
         color: $text-1;
         font-size: 2em;
         padding-bottom: 1em;
