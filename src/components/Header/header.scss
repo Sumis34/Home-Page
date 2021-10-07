@@ -19,10 +19,13 @@
 
 .title,
 .sub-title {
-    margin-left: 10%;
     z-index: 10;
     position: relative;
     line-height: .9em;
+}
+
+.header-title{
+    margin: 25% 0 0 10%;
 }
 
 button{
@@ -47,10 +50,6 @@ video {
 .blob {
     height: 30em;
     width: 30em;
-}
-
-.col {
-    margin: 25% 0 0 0;
 }
 
 @keyframes simple-fade-in {

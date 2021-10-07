@@ -1,5 +1,19 @@
-@import './colors.scss';
+@import "./colors.scss";
 .App {
     background-color: $bg-dark-grey;
     min-height: 100vh;
+}
+
+button.primary {
+    background: linear-gradient(90deg, $tertiary 0%, $primary 100%);
+    font-size: 1em;
+    border-radius: $border-main;
+    border-style: none;
+    padding: 0.4em 1em;
+    transition: .4s;    
+
+    &:hover{
+        filter: saturate(.5);
+        transition: .4s;
+    }
 }
