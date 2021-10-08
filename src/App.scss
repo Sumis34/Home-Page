@@ -10,10 +10,10 @@ button.primary {
     border-radius: $border-main;
     border-style: none;
     padding: 0.4em 1em;
-    transition: .4s;    
-
-    &:hover{
-        filter: saturate(.5);
-        transition: .4s;
+    transition: 0.4s;
+    filter: saturate(0.6);
+    &:hover {
+        filter: saturate(1);
+        transition: 0.4s;
     }
 }
