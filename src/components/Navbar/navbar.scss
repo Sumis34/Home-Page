@@ -35,16 +35,17 @@ nav {
 .nav-mobile {
     z-index: 100;
     background-color: transparent;
-    padding: 1.2em;
+    padding: 3em 5em;
     position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    transition: 1s;
+    transition: 0.3s ease-in-out;
 }
 
-.scrolled{
+.scrolled {
     background-color: $bg-medium-grey;
+    padding: 1.2em;
 }
 
 .logo {
@@ -60,8 +61,11 @@ nav {
     visibility: hidden;
 }
 
-.active-nav-link{
+.active-nav-link {
     color: $primary;
+    &:hover {
+        color: $secondary;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -77,6 +81,7 @@ nav {
     }
     .nav-mobile {
         display: block;
+        padding: 1.2em;
     }
 
     nav ul {

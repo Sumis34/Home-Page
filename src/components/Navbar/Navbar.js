@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { NavHashLink as Link}  from "react-router-hash-link";
 import './navbar.scss';
 import logo from '../../assets/images/nk-logo_bright.png';
+//import cross from '../../assets/icons/cross.svg';
 
 export function NavLinks() {
     return (
