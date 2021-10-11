@@ -5,7 +5,7 @@ import '../home.scss';
 export default function Work() {
     return (
         <>
-            <section>
+            <section id ="work">
                 <p>Work</p>
             </section>
         </>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import './navbar.scss';
 import logo from '../../assets/images/nk-logo_bright.png';
@@ -26,9 +26,16 @@ export default function Nav() {
         setActive(!isActive);
     };
 
+    useEffect(() => {
+        window.addEventListener("scroll", () =>{
+            const nav = document.getElementById("nav");
+            nav.classList.toggle("scrolled", window.scrollY > 0);
+        });
+    });
+
     return (
         <>
-            <div className="nav-mobile">
+            <div className="nav-mobile" id="nav">
                 <div className="nav-icons">
                     <Link to="/"><img className="logo" src={logo} alt="logo" /></Link><i className="fas fa-bars burger" onClick={() => handleToggle()}></i>
                 </div>

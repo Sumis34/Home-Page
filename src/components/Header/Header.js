@@ -13,7 +13,7 @@ export default function Header() {
                     <div className="col header-title">
                         <h1 className="title">Noé Krebs</h1>
                         <h2 className="sub-title">Development and design</h2>
-                        <Link to="/home#home"><button type="button" className="primary" id="btn-head">View more</button></Link>
+                        <Link to="/home#work"><button type="button" className="primary" id="btn-head">View more</button></Link>
                     </div>
                 </div>
                 {/* <p>47° 1' 41.3544" 7° 24' 47.5194"</p> */}
