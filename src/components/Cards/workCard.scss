@@ -1,0 +1,48 @@
+@import "../../colors.scss";
+.place-holder {
+    padding-top: 20vh;
+}
+
+.work-card-body {
+    background-color: $text-1;
+    width: 20rem;
+    height: 25rem;
+    border-radius: 20px;
+    position: relative;
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+        z-index: 0;
+    }
+}
+
+.work-card-header {
+    padding: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+.work-card-title {
+    font-weight: 700;
+    font-size: 2.2em;
+}
+
+.work-card-description {
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+.work-card-wrap {
+    background-color: $primary;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    filter: blur(1);
+    opacity: .7;
+}

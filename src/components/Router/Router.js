@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import Home from '../../pages/Home/Home';
+import Card from '../Cards/WorkCard';
 
 export default function Router() {
     return (
@@ -9,7 +10,7 @@ export default function Router() {
                 <h1>About</h1>
             </Route>
             <Route path="/users">
-                <h1>Users</h1>
+                <Card />
             </Route>
             <Route path="/">
                 <Home />
