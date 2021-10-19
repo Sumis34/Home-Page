@@ -6,10 +6,11 @@ import img from '../../../assets/images/engadin.png'
 
 export default function Work() {
     return (
-        <>
-            <section id="work">
-                <p>Work</p>
-                <ScrollContainer className="scroll-container">
+
+        <section id="work">
+            <p>Work</p>
+            <ScrollContainer className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
+                <div className="cards">
                     <Card
                         title="Engadin"
                         description="Persönliches Projekt"
@@ -24,8 +25,9 @@ export default function Work() {
                         linkTitel="Video auf Youtube schauen"
                         img={img}
                     />
-                </ScrollContainer>
-            </section>
-        </>
+                </div>
+            </ScrollContainer>
+        </section>
+
     )
 }

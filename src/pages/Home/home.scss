@@ -1,5 +1,8 @@
 @import '../../colors.scss';
-
-.home{
+.home {
     min-height: 100vh;
+}
+
+.cards {
+    display: flex;
 }
