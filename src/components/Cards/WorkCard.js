@@ -1,12 +1,9 @@
 import React from 'react'
 import './workCard.scss'
 
-
-
 export default function WorkCard(props) {
     return (
         <>
-            <div className="place-holder"></div>
             <div className="work-card-body">
                 
                 <div className="work-card-header">
@@ -18,7 +15,6 @@ export default function WorkCard(props) {
                 </div>
                 <img src={props.img} alt="Logo" />
             </div>
-
         </>
     )
 }
