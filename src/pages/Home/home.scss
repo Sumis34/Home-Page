@@ -13,7 +13,22 @@ section {
             margin-right: $card-width;
         }
         .work-card-body:first-child {
-            margin-left: 0;
+            margin-left: 1em;
+        }
+        .swipe {
+            height: 50px;
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            z-index: 11;
+            opacity: 0;
+            display: none;
+            pointer-events: none;
+            &.animation {
+                display: unset !important;
+                transform: translateX(-50%) translateY(-50%);
+                animation: swipe 7s infinite;
+            }
         }
     }
 }
@@ -38,4 +53,28 @@ section {
     display: flex;
     min-width: fit-content;
     max-width: none;
+}
+
+@keyframes swipe {
+    0% {
+        transform: translateX(-50%) translateY(-50%);
+    }
+    60% {
+        opacity: 0;
+    }
+    70% {
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(-80%) translateY(-50%);
+    }
+    90% {
+        transform: translateX(-20%) translateY(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%);
+        opacity: 0;
+    }
 }
