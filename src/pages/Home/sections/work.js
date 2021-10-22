@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import '../home.scss';
 import ScrollContainer from 'react-indiana-drag-scroll'
 import Card from '../../../components/Cards/WorkCard'
 import img from '../../../assets/images/engadin.png'
 import swipe from '../../../assets/icons/swipe.png'
+import arrow from '../../../assets/icons/right_arrow.svg'
 
 export default function Work() {
 
@@ -22,6 +23,7 @@ export default function Work() {
         <section id="work">
             <p>Work</p>
             <img src={swipe} alt="swipe" className="swipe animation" id="work-swipe"/>
+            <img src={arrow} alt="arrow" className="arrow" id="work-arrow"/>
             <div className="fade-right"></div>
             <ScrollContainer className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
                 <div className="cards" id="work-cards">

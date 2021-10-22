@@ -22,13 +22,18 @@ section {
             top: 50%;
             z-index: 11;
             opacity: 0;
-            display: none;
             pointer-events: none;
+            transform: translateX(-50%) translateY(-50%);
             &.animation {
-                display: unset !important;
-                transform: translateX(-50%) translateY(-50%);
                 animation: swipe 7s infinite;
             }
+        }
+        .arrow {
+            height: 40px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            z-index: 11;
         }
     }
 }
