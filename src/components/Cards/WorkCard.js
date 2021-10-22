@@ -5,7 +5,6 @@ export default function WorkCard(props) {
     return (
         <>
             <div className="work-card-body">
-                
                 <div className="work-card-header">
                     <h2 className="work-card-title">{props.title}</h2>
                     <h3 className="work-card-description">{props.description}</h3>

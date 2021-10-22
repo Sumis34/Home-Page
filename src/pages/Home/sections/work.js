@@ -9,6 +9,7 @@ export default function Work() {
 
         <section id="work">
             <p>Work</p>
+            <div className="fade-right"></div>
             <ScrollContainer className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
                 <div className="cards">
                     <Card
@@ -25,8 +26,24 @@ export default function Work() {
                         linkTitel="Video auf Youtube schauen"
                         img={img}
                     />
+                    <Card
+                        title="Engadin"
+                        description="Persönliches Projekt"
+                        link="http://google.ch"
+                        linkTitel="Video auf Youtube schauen"
+                        img={img}
+                    />
+                    <Card
+                        title="Engadin"
+                        description="Persönliches Projekt"
+                        link="http://google.ch"
+                        linkTitel="Video auf Youtube schauen"
+                        img={img}
+                    />
                 </div>
+
             </ScrollContainer>
+
         </section>
 
     )
