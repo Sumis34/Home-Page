@@ -6,6 +6,8 @@ import Line from '../../../components/AccentLine/AccentLine'
 import img from '../../../assets/images/engadin.png'
 import uhcg from '../../../assets/images/uhcg.png'
 import ski from '../../../assets/images/ski.png'
+import fpv from '../../../assets/images/fpv.png'
+import zermatt from '../../../assets/images/zermatt.png'
 import swipe from '../../../assets/icons/swipe.png'
 import arrow from '../../../assets/icons/right_arrow.svg'
 import blob from '../../../assets/design-elements/blob.svg'
@@ -55,11 +57,19 @@ export default function Work() {
                         img={ski}
                     />
                     <Card
-                        title="Engadin"
+                        title="The beauty of FPV"
                         description="Persönliches Projekt"
                         link="http://google.ch"
                         linkTitel="Video auf Youtube schauen"
-                        img={img}
+                        img={fpv}
+                        font="dark"
+                    />
+                    <Card
+                        title="Zermatt"
+                        description="Persönliches Projekt"
+                        link="http://google.ch"
+                        linkTitel="Video auf Youtube schauen"
+                        img={zermatt}
                     />
                 </div>
 
