@@ -1,0 +1,7 @@
+@import "../../colors.scss";
+.accent-line {
+    height: 1em;
+    width: 7em;
+    border-radius: 10px;
+    background: linear-gradient(to left, $primary 0%, $secondary 100%);
+}

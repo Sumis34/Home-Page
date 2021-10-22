@@ -2,6 +2,7 @@
 .App {
     background-color: $bg-dark-grey;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 button.primary {

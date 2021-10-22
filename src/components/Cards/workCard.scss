@@ -4,7 +4,7 @@
 }
 
 .work-card-body {
-    background-color: $text-1;
+    background-color: transparent;
     width: 20rem;
     height: 25rem;
     border-radius: $border-main;
@@ -22,7 +22,6 @@
         z-index: 0;
     }
     &:hover {
-        cursor: pointer;
         transform: scale(1.03);
         transform-origin: 50% 50%;
     }

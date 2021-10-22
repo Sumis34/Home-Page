@@ -2,9 +2,13 @@ import React, { useEffect } from 'react'
 import '../home.scss';
 import ScrollContainer from 'react-indiana-drag-scroll'
 import Card from '../../../components/Cards/WorkCard'
+import Line from '../../../components/AccentLine/AccentLine'
 import img from '../../../assets/images/engadin.png'
+import uhcg from '../../../assets/images/uhcg.png'
+import ski from '../../../assets/images/ski.png'
 import swipe from '../../../assets/icons/swipe.png'
 import arrow from '../../../assets/icons/right_arrow.svg'
+import blob from '../../../assets/design-elements/blob.svg'
 
 export default function Work() {
 
@@ -14,16 +18,18 @@ export default function Work() {
         const cards = document.getElementById("work-cards");
         cards.addEventListener("mousedown", () =>{
             const swipe = document.getElementById("work-swipe");
-            console.log("Darging")
             swipe.classList.remove("animation");
         });
     });
 
     return (
         <section id="work">
-            <p>Work</p>
+            <Line />
+            <h2>My work.</h2>
+            <img src={blob} alt="..." id="work-blob"/>
             <img src={swipe} alt="swipe" className="swipe animation" id="work-swipe"/>
             <img src={arrow} alt="arrow" className="arrow" id="work-arrow"/>
+            
             <div className="fade-right"></div>
             <ScrollContainer className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
                 <div className="cards" id="work-cards">
@@ -35,18 +41,18 @@ export default function Work() {
                         img={img}
                     />
                     <Card
-                        title="Engadin"
-                        description="Persönliches Projekt"
+                        title="UHCG"
+                        description="Ein Auftrag vom UHCG"
                         link="http://google.ch"
                         linkTitel="Video auf Youtube schauen"
-                        img={img}
+                        img={uhcg}
                     />
                     <Card
-                        title="Engadin"
+                        title="Chasing winter"
                         description="Persönliches Projekt"
                         link="http://google.ch"
                         linkTitel="Video auf Youtube schauen"
-                        img={img}
+                        img={ski}
                     />
                     <Card
                         title="Engadin"

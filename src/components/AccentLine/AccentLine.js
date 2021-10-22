@@ -3,8 +3,7 @@ import './accentline.scss'
 
 export default function Accentline() {
     return (
-        <div>
-            
+        <div className="accent-line">
         </div>
     )
 }
