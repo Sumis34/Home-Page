@@ -4,10 +4,7 @@
 }
 
 section {
-    margin: 0 auto;
-    padding: 2em;
     position: relative;
-    max-width: 1300px;
     &#work {
         margin-top: 4em;
         .work-card-body:last-child {
@@ -26,7 +23,7 @@ section {
             pointer-events: none;
             transform: translateX(-50%) translateY(-50%);
             &.animation {
-                animation: swipe 7s infinite;
+                animation: swipe 5s infinite;
             }
         }
         .arrow {
@@ -36,6 +33,12 @@ section {
             top: 50%;
             z-index: 11;
         }
+    }
+    & #work-content {
+        padding: 2em;
+        position: relative;
+        max-width: 1300px;
+        margin: 0 auto;
     }
     h2 {
         font-weight: 800;
@@ -50,7 +53,7 @@ section {
 }
 
 .fade-right {
-    background: linear-gradient(to right, transparent 70%, $bg-dark-grey 95%);
+    background: linear-gradient(to right, transparent 70%, $bg-dark-grey 80%);
     position: absolute;
     top: 0;
     left: 0;
