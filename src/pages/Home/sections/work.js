@@ -66,7 +66,7 @@ export default function Work() {
                                 link="http://google.ch"
                                 linkTitel="Video auf Youtube schauen"
                                 img={fpv}
-                                font="dark"
+                                type="dark"
                             />
                             <Card
                                 title="Zermatt"
@@ -74,6 +74,7 @@ export default function Work() {
                                 link="http://google.ch"
                                 linkTitel="Video auf Youtube schauen"
                                 img={zermatt}
+                                type="dark"
                             />
                         </div>
                     </ScrollContainer>
