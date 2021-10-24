@@ -7,6 +7,7 @@ section {
     position: relative;
     &#work {
         margin-top: 4em;
+        height: 100vh;
         .work-card-body:last-child {
             margin-right: $card-width;
         }
@@ -35,15 +36,29 @@ section {
         }
     }
     & #work-content {
-        padding: 2em;
+        padding: 2em $main-margin;
         position: relative;
-        max-width: 1300px;
+        max-width: $max-width;
         margin: 0 auto;
     }
     h2 {
         font-weight: 800;
         padding: .2em 0;
-        font-size: 3em
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    p {
+        font-size: 2em;
+        color: $text-1;
+        width: 60%;
+    }
+    a {
+        color: $text-1;
+        text-decoration: none;
+        font-size: 2em;
     }
 }
 
@@ -58,7 +73,7 @@ section {
     display: flex;
     top: 0;
     left: 0;
-    height: 200%;
+    height: 100%;
     width: 100%;
     z-index: 10;
     pointer-events: none;

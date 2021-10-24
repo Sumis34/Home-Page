@@ -1,0 +1,39 @@
+@import '../../../colors.scss';
+section#contact {
+    img {
+        width: 110%;
+        &#wave-top {
+            transform: translateY(15%) translateX(-5%);
+        }
+        &#wave-bottom {
+            transform: translateY(-26%) translateX(-5%);
+        }
+    }
+    .contact-bg {
+        position: relative;
+        z-index: 3;
+        min-height: 80vh;
+        background-color: $primary;
+    }
+    .contact-cont {
+        margin: 0 auto;
+        max-width: $max-width;
+        padding: 2em $main-margin;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-info {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20em;
+        margin-top: 5em;
+        padding-left: 2em;
+        a,
+        h3 {
+            transform: translateY(-7em);
+        }
+    }
+    .contact-icon {
+        height: 30em;
+    }
+}
