@@ -22,14 +22,14 @@ export default function contact() {
                                 <img src={phone} alt="phone" className="contact-icon" />
                                 <div className="info-text">
                                     <h3>Telephone</h3>
-                                    <a href="#" className="underline">Hallo</a>
+                                    <a href="tel:+41794855655" className="underline">+41 79 485 56 55</a>
                                 </div>
                             </div>
                             <div className="email">
                                 <img src={email} alt="email" className="contact-icon" />
                                 <div className="info-text">
                                     <h3>E-mail</h3>
-                                    <a href="#" className="underline">email</a>
+                                    <a href="mailto:noe.krebs@bluemail.ch" className="underline">noe.krebs@bluemail.ch</a>
                                 </div>
                             </div>
                         </div>

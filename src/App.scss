@@ -24,6 +24,7 @@ button.primary {
     width: fit-content;
     position: relative;
     overflow: hidden;
+    padding-bottom: 0.1em;
     &::after {
         content: '';
         position: absolute;
@@ -34,7 +35,6 @@ button.primary {
         background-color: $tertiary;
         opacity: 0;
         transition: opacity 300ms, transform 300ms;
-        border-radius: 0.001em;
     }
     &:hover::after,
     &:focus::after {

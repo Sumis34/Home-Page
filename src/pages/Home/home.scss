@@ -15,14 +15,15 @@ section {
         font-weight: bold;
     }
     p {
-        font-size: 2em;
+        font-size: 1.5em;
+        font-weight: 300;
         color: $text-1;
         width: 60%;
     }
     a {
         color: $text-1;
         text-decoration: none;
-        font-size: 2em;
+        font-size: 1.7em;
         transition: 0.3s;
         &:hover {
             color: $text-0;
@@ -130,5 +131,13 @@ section {
 @media only screen and (min-width: 1300px) {
     .fade-right {
         background: linear-gradient(to right, transparent 70%, $bg-dark-grey 80%);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    section {
+        p {
+            width: 100%;
+        }
     }
 }
