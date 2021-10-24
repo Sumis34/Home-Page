@@ -59,6 +59,9 @@ section {
         color: $text-1;
         text-decoration: none;
         font-size: 2em;
+        &:hover {
+            color: $text-1;
+        }
     }
 }
 

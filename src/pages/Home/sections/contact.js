@@ -21,12 +21,12 @@ export default function contact() {
                             <div className="phone">
                                 <img src={phone} alt="phone" className="contact-icon" />
                                 <h3>Telephone</h3>
-                                <a href="#">Hallo</a>
+                                <a href="#" className="underline">Hallo</a>
                             </div>
                             <div className="email">
                                 <img src={email} alt="email" className="contact-icon" />
                                 <h3>E-mail</h3>
-                                <a href="#">email</a>
+                                <a href="#" className="">email</a>
                             </div>
                         </div>
                     </div>
