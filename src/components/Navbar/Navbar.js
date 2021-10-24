@@ -14,7 +14,7 @@ export function NavLinks() {
                 <Link to="/home#work" activeClassName="active-nav-link">My work</Link>
             </li>
             <li>
-                <Link to="/users">Hire me</Link>
+                <Link to="/home#contact" activeClassName="active-nav-link">Hire me</Link>
             </li>
         </>
     )

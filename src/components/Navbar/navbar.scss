@@ -1,10 +1,8 @@
 @import "../../colors.scss";
-
 nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
     ul {
         list-style: none;
         display: flex;
@@ -14,7 +12,6 @@ nav {
         padding: 0;
         margin: 0;
     }
-
     li {
         display: inline-block;
         width: fit-content;
@@ -84,11 +81,9 @@ nav {
         padding: 1.2em;
         background-color: transparent;
     }
-
     nav ul {
         flex-direction: column;
     }
-
     nav {
         display: block;
         position: fixed;
@@ -101,12 +96,10 @@ nav {
         transform: translateX(100%);
         background-color: $bg-medium-grey;
         padding: 2em;
-
         &.active {
             transform: translateX(30%);
         }
     }
-
     .close {
         visibility: visible;
         color: $text-1;
