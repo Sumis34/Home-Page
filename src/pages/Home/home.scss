@@ -5,6 +5,30 @@
 
 section {
     position: relative;
+    h2 {
+        font-weight: 800;
+        padding: .2em 0;
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+    p {
+        font-size: 2em;
+        color: $text-1;
+        width: 60%;
+    }
+    a {
+        color: $text-1;
+        text-decoration: none;
+        font-size: 2em;
+        transition: 0.3s;
+        &:hover {
+            color: $text-0;
+            transition: 0.3s;
+        }
+    }
     &#work {
         margin-top: 4em;
         height: 100vh;
@@ -40,28 +64,6 @@ section {
         position: relative;
         max-width: $max-width;
         margin: 0 auto;
-    }
-    h2 {
-        font-weight: 800;
-        padding: .2em 0;
-        font-size: 3em;
-    }
-    h3 {
-        font-size: 2.5em;
-        font-weight: bold;
-    }
-    p {
-        font-size: 2em;
-        color: $text-1;
-        width: 60%;
-    }
-    a {
-        color: $text-1;
-        text-decoration: none;
-        font-size: 2em;
-        &:hover {
-            color: $text-1;
-        }
     }
 }
 

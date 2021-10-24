@@ -20,13 +20,17 @@ export default function contact() {
                         <div className="contact-info">
                             <div className="phone">
                                 <img src={phone} alt="phone" className="contact-icon" />
-                                <h3>Telephone</h3>
-                                <a href="#" className="underline">Hallo</a>
+                                <div className="info-text">
+                                    <h3>Telephone</h3>
+                                    <a href="#" className="underline">Hallo</a>
+                                </div>
                             </div>
                             <div className="email">
                                 <img src={email} alt="email" className="contact-icon" />
-                                <h3>E-mail</h3>
-                                <a href="#" className="">email</a>
+                                <div className="info-text">
+                                    <h3>E-mail</h3>
+                                    <a href="#" className="underline">email</a>
+                                </div>
                             </div>
                         </div>
                     </div>

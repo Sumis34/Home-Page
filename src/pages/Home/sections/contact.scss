@@ -28,10 +28,9 @@ section#contact {
         column-gap: 20em;
         margin-top: 5em;
         padding-left: 2em;
-        a,
-        h3 {
-            transform: translateY(-7em);
+        .info-text {
             position: absolute;
+            top: 65%;
         }
     }
     .contact-icon {
