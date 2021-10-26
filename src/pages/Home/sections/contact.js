@@ -3,12 +3,14 @@ import waveTop from '../../../assets/design-elements/wave-1.svg'
 import waveBottom from '../../../assets/design-elements/wave-2.svg'
 import phone from '../../../assets/design-elements/phone-alt-solid.svg'
 import email from '../../../assets/design-elements/envelope-solid.svg'
-import './contact.scss'
+import blob from '../../../assets/design-elements/blob-gradiant.svg'
+import './section.scss'
 
 export default function contact() {
     return (
         <div>
             <section id="contact">
+                <img src={blob} alt="..." id="blob" />
                 <img src={waveTop} alt="wave-top" id="wave-top" />
                 <div className="contact-bg">
                     <div className="contact-cont">

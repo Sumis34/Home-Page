@@ -9,6 +9,13 @@ section#contact {
             transform: translateY(-26%) translateX(-5%);
         }
     }
+    #blob {
+        position: absolute;
+        transform: rotate(-154deg);
+        height: 60%;
+        left: -40%;
+        top: -5%;
+    }
     .contact-bg {
         position: relative;
         z-index: 3;

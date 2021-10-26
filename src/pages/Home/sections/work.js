@@ -27,10 +27,6 @@ export default function Work() {
     return (
         <>
             <section id="work">
-                <div className="fade-right">
-                    {/* <div className="fade">Hallo</div>
-                    <div className="solid"></div> */}
-                </div>
                 <div id="work-content">
                     <Line />
                     <h2>My work.</h2>
