@@ -31,6 +31,8 @@ section {
         }
     }
     &#work {
+        position: relative;
+        z-index: 9;
         margin-top: 4em;
         height: 100vh;
         .work-card-body:last-child {
@@ -63,10 +65,10 @@ section {
     &#work::after {
         content: '';
         position: absolute;
-        bottom: -20%;
+        bottom: 0%;
         left: 0;
         width: 100%;
-        height: 120%;
+        height: 100%;
         pointer-events: none;
         background: linear-gradient(to right, transparent 50%, $bg-dark-grey 90%);
     }

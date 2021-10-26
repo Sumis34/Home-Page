@@ -1,5 +1,8 @@
 @import '../../../colors.scss';
 section#contact {
+    position: relative;
+    z-index: 11;
+    margin-top: -10vh;
     img {
         width: 110%;
         &#wave-top {
@@ -47,4 +50,43 @@ section#contact {
     .contact-icon {
         height: 25em;
     }
+}
+
+section#philosophie {
+    min-height: 100vh;
+    margin-top: -20vh;
+    position: relative;
+    z-index: 8;
+    #forest {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+    .content {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 25% $main-margin;
+        position: relative;
+        z-index: 10;
+        text-align: end;
+        p {
+            width: 100%;
+        }
+        .line-flex {
+            justify-content: flex-end;
+        }
+    }
+}
+
+section#philosophie::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: linear-gradient(0deg, $bg-dark-grey 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 55%, $bg-dark-grey 100%);
 }
