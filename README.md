@@ -1,6 +1,12 @@
 # Home Page
 ## Important to know
 In case this site is not understandable I should have described it here.
+
+If you cant install react-reveal use this command befor.
+```powershell
+    npm config set legacy-peer-deps true
+```
+
 ## TODO
 Progress is tracked on [Trello](https://trello.com/b/4sWMnI6I/home-page).
 
