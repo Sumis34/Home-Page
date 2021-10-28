@@ -30,7 +30,8 @@ export default function Nav() {
     useEffect(() => {
         window.addEventListener("scroll", () =>{
             const nav = document.getElementById("nav");
-            nav.classList.toggle("scrolled", window.scrollY > 100);
+            if (nav)
+                nav.classList.toggle("scrolled", window.scrollY > 100);
         });
     });
 

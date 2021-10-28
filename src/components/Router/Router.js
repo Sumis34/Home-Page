@@ -2,14 +2,14 @@ import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import Home from '../../pages/Home/Home';
 import Card from '../Cards/WorkCard';
-
+import ContactForm from '../../pages/ContactForm/ContactForm'
 import img from '../../assets/images/engadin.png'
 
 export default function Router() {
     return (
         <Switch>
             <Route path="/contact-form">
-                <h1>About</h1>
+                <ContactForm />
             </Route>
             <Route path="/users">
                 <Card
