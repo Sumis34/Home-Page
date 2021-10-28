@@ -48,3 +48,18 @@ button.primary {
         transform: translate3d(0, 0, 0);
     }
 }
+
+.fadeInUp {
+    animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}

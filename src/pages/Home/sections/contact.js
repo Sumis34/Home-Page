@@ -4,6 +4,7 @@ import waveBottom from '../../../assets/design-elements/wave-2.svg'
 import phone from '../../../assets/design-elements/phone-alt-solid.svg'
 import email from '../../../assets/design-elements/envelope-solid.svg'
 import blob from '../../../assets/design-elements/blob-gradiant.svg'
+import Reveal from 'react-reveal/Reveal'
 import './section.scss'
 
 export default function contact() {
@@ -14,11 +15,13 @@ export default function contact() {
                 <img src={waveTop} alt="wave-top" id="wave-top" />
                 <div className="contact-bg">
                     <div className="contact-cont">
-                        <div className="contact-header">
-                            <h2>Hast du eine Vision?</h2>
-                            <p>In Zusammenarbeit erstellen wir einen
-                                einzigartigen Film der zu dir passt. </p>
-                        </div>
+                        <Reveal effect="fadeInUp">
+                            <div className="contact-header">
+                                <h2>Hast du eine Vision?</h2>
+                                <p>In Zusammenarbeit erstellen wir einen
+                                    einzigartigen Film der zu dir passt. </p>
+                            </div>
+                        </Reveal>
                         <div className="contact-info">
                             <div className="phone">
                                 <img src={phone} alt="phone" className="contact-icon" />
