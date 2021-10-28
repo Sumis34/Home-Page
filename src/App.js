@@ -1,13 +1,11 @@
 import './App.scss';
 import React, { useEffect } from 'react';
-import Navbar from './components/Navbar/Navbar'
 import Router from './components/Router/Router'
 import favBright from './assets/images/nk-logo_bright.png'
 import favDark from './assets/images/nk-logo_dark.png'
 
 
 function App() {
-
   useEffect(() => {
     const faviconUpdate = async () => {
       //grab favicon element by ID
@@ -26,10 +24,8 @@ function App() {
 
     faviconUpdate();
   });
-
   return (
     <div className="App">
-      <Navbar />
       <Router />
     </div>
   );

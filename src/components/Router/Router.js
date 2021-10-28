@@ -8,7 +8,7 @@ import img from '../../assets/images/engadin.png'
 export default function Router() {
     return (
         <Switch>
-            <Route path="/about">
+            <Route path="/contact-form">
                 <h1>About</h1>
             </Route>
             <Route path="/users">
