@@ -19,7 +19,7 @@ export default function ContactMenu() {
 
         setTimeout(function () {
             history.push("/contact-form");
-        }, 1000);
+        }, 700);
     };
 
     return (

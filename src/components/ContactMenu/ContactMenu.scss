@@ -19,6 +19,11 @@
 }
 
 #contact-btn {
-    position: relative;
+    position: fixed;
+    bottom: 3em;
+    right: 3em;
     z-index: 100;
+    background-color: $bg-dark-grey;
+    background-image: none;
+    border: solid 2px $secondary;
 }
