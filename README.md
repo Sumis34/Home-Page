@@ -7,6 +7,28 @@ If you cant install react-reveal use this command befor.
     npm config set legacy-peer-deps true
 ```
 
+## Code tipps
+
+### Loop in sass
+
+Post found [here](https://stackoverflow.com/questions/40739695/can-i-update-sass-variables-in-media-queries/54188902)
+
+```css
+    $breakpoints: (
+        1200px: 10px,
+        1000px: 15px,
+        800px: 20px,
+    );
+
+    @each $width, $margin in $breakpoints {
+        @media screen and (max-width: $width) {
+            .element {
+            margin-top: $margin;
+            }
+        }
+    }
+```
+
 ## TODO
 Progress is tracked on [Trello](https://trello.com/b/4sWMnI6I/home-page).
 

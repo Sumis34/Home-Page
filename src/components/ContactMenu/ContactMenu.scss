@@ -10,8 +10,6 @@
     transition: .7s;
     height: 0;
     width: 0;
-    // height: 0;
-    // width: 0;
     &.open {
         height: 300%;
         width: 300%;
@@ -26,4 +24,5 @@
     background-color: $bg-dark-grey;
     background-image: none;
     border: solid 2px $secondary;
+    box-shadow: $soft-shadow;
 }

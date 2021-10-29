@@ -2,7 +2,6 @@ import React from 'react'
 import './ContactForm.scss'
 import { useHistory } from 'react-router-dom'
 import x from '../../assets/icons/x-mark-thin.svg'
-import Reveal from 'react-reveal/Reveal'
 import Fade from 'react-reveal/Fade'
 
 
