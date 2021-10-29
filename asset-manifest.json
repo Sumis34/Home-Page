@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/home-page/static/css/main.56904e34.chunk.css",
+    "main.js": "/home-page/static/js/main.83604f0d.chunk.js",
+    "main.js.map": "/home-page/static/js/main.83604f0d.chunk.js.map",
+    "runtime-main.js": "/home-page/static/js/runtime-main.275e57ff.js",
+    "runtime-main.js.map": "/home-page/static/js/runtime-main.275e57ff.js.map",
+    "static/css/2.f2512455.chunk.css": "/home-page/static/css/2.f2512455.chunk.css",
+    "static/js/2.1ccf82b4.chunk.js": "/home-page/static/js/2.1ccf82b4.chunk.js",
+    "static/js/2.1ccf82b4.chunk.js.map": "/home-page/static/js/2.1ccf82b4.chunk.js.map",
+    "static/js/3.ffe4e3f7.chunk.js": "/home-page/static/js/3.ffe4e3f7.chunk.js",
+    "static/js/3.ffe4e3f7.chunk.js.map": "/home-page/static/js/3.ffe4e3f7.chunk.js.map",
+    "index.html": "/home-page/index.html",
+    "static/css/2.f2512455.chunk.css.map": "/home-page/static/css/2.f2512455.chunk.css.map",
+    "static/css/main.56904e34.chunk.css.map": "/home-page/static/css/main.56904e34.chunk.css.map",
+    "static/js/2.1ccf82b4.chunk.js.LICENSE.txt": "/home-page/static/js/2.1ccf82b4.chunk.js.LICENSE.txt",
+    "static/media/FebruarWeb-1.f527c7c6.m4v": "/home-page/static/media/FebruarWeb-1.f527c7c6.m4v",
+    "static/media/blob-gradiant.fe3477c5.svg": "/home-page/static/media/blob-gradiant.fe3477c5.svg",
+    "static/media/blob.52a3542e.svg": "/home-page/static/media/blob.52a3542e.svg",
+    "static/media/engadin.f3692d4f.png": "/home-page/static/media/engadin.f3692d4f.png",
+    "static/media/envelope-solid.47f73db2.svg": "/home-page/static/media/envelope-solid.47f73db2.svg",
+    "static/media/forest.50593ea1.png": "/home-page/static/media/forest.50593ea1.png",
+    "static/media/fpv.3eaceffc.png": "/home-page/static/media/fpv.3eaceffc.png",
+    "static/media/nk-logo_bright.ac75d890.png": "/home-page/static/media/nk-logo_bright.ac75d890.png",
+    "static/media/nk-logo_dark.5448496c.png": "/home-page/static/media/nk-logo_dark.5448496c.png",
+    "static/media/phone-alt-solid.46338ff8.svg": "/home-page/static/media/phone-alt-solid.46338ff8.svg",
+    "static/media/right_arrow.47d50d25.svg": "/home-page/static/media/right_arrow.47d50d25.svg",
+    "static/media/ski.ff9c3ed1.png": "/home-page/static/media/ski.ff9c3ed1.png",
+    "static/media/swipe.d0173f6a.png": "/home-page/static/media/swipe.d0173f6a.png",
+    "static/media/uhcg.d88c23e9.png": "/home-page/static/media/uhcg.d88c23e9.png",
+    "static/media/wave-1.281cc073.svg": "/home-page/static/media/wave-1.281cc073.svg",
+    "static/media/wave-2.744a1f9a.svg": "/home-page/static/media/wave-2.744a1f9a.svg",
+    "static/media/x-mark-thin.5cf71fa6.svg": "/home-page/static/media/x-mark-thin.5cf71fa6.svg",
+    "static/media/zermatt.a3eae005.png": "/home-page/static/media/zermatt.a3eae005.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.275e57ff.js",
+    "static/css/2.f2512455.chunk.css",
+    "static/js/2.1ccf82b4.chunk.js",
+    "static/css/main.56904e34.chunk.css",
+    "static/js/main.83604f0d.chunk.js"
+  ]
+}
