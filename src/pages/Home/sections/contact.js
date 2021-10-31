@@ -19,7 +19,8 @@ export default function contact() {
                             <div className="contact-header">
                                 <h2>Hast du eine Vision?</h2>
                                 <p>In Zusammenarbeit erstellen wir einen
-                                    einzigartigen Film der zu dir passt. </p>
+                                    einzigartigen Film der zu dir passt. Erreiche mich direkt via E-Mail oder Telephone, 
+                                    du kannst auch direkt das Onlineformular über den button "Projekt starten" ausfüllen.</p>
                             </div>
                         </Reveal>
                         <div className="contact-info">
