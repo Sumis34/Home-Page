@@ -2,57 +2,68 @@ import React, { useState, useEffect } from 'react'
 import './ContactForm.scss'
 import { useHistory } from 'react-router-dom'
 import x from '../../assets/icons/x-mark-thin.svg'
+import arrow from '../../assets/icons/thin-arrow.svg'
 import Fade from 'react-reveal/Fade'
+import Typewriter from 'typewriter-effect'
 
 
 export function FormFields(props) {
     const [state, setState] = useState(0);
+
     useEffect(() => {
         if (state > 3 || state < 0)
             setState(0);
-    })
+    }, [state])
 
     switch (state) {
         case 1:
             return (
                 <div>
-                    <h1>2</h1>
-                    <FormButton onClick={() => setState(state + 1)} type="btn btn-primary" label="Forward" />
-                    <FormButton onClick={() => setState(state - 1)} type="btn btn-warning" label="Backwards" />
+                    <h1 className="from-subtitle">Wie heisst du?</h1>
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn backwards" icon={arrow}/>
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow}/>
                 </div>
             )
         case 2:
             return (
                 <div>
                     <h1>3</h1>
-                    <FormButton onClick={() => setState(state + 1)} type="btn btn-primary" label="Forward" />
-                    <FormButton onClick={() => setState(state - 1)} type="btn btn-warning" label="Backwards" />
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn" icon={arrow}/>
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow}/>
                 </div>
             )
         case 3:
             return (
                 <div>
                     <h1>4</h1>
-                    <FormButton onClick={() => setState(state + 1)} type="btn btn-primary" label="Forward" />
-                    <FormButton onClick={() => setState(state - 1)} type="btn btn-warning" label="Backwards" />
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn" icon={arrow}/>
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow}/>
                 </div>
             )
         default:
             return (
                 <div>
-                    <h1>1</h1>
-                    <FormButton onClick={() => setState(state + 1)} type="btn btn-primary" label="Forward" />
-                    <FormButton onClick={() => setState(state - 1)} type="btn btn-warning" label="Backwards" />
+                    <h2 className="form-topic">Zusammen kreieren wir</h2>
+                    <h1 className="from-title">
+                        <Typewriter options={{
+                            strings: ['Ihr Imagefilm', 'Dein Hobbyfilm', 'Ihr Werbespot', 'Ihr Wunsch!'],
+                            autoStart: true,
+                            loop: true,
+                            pauseFor: 2000
+                        }} />
+                    </h1>
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" label="Los geht's!" icon={arrow} />
                 </div>
             )
     }
 
 }
 
-export function FormButton(props) {
+function FormButton(props) {
     return (
         <button className={props.type} onClick={props.onClick}>
             {props.label}
+            <img src={props.icon} alt="icon" className="icon" />
         </button>
     )
 }
@@ -70,10 +81,9 @@ export default function ContactForm() {
         <Fade bottom cascade>
             <div className="contact-menu" >
                 <img src={x} alt="x" id="close-contact-menu" onClick={() => closeMenu()} />
-                <h1>Moin</h1>
-                <h1>Hud</h1>
-                <h1>asd</h1>
-                <FormFields />
+                <div className="form-content">
+                    <FormFields />
+                </div>
             </div>
         </Fade>
     )

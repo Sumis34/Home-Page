@@ -5,3 +5,42 @@
     width: 100vw;
     padding: $main-margin;
 }
+
+.form-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.from-title {
+    font-weight: 900;
+    font-size: 6em;
+}
+
+.form-topic {
+    font-size: 3em;
+}
+
+.form-subtitle {
+    opacity: .3;
+    font-size: 3em;
+}
+
+.form-btn {
+    background-color: $bg-dark-grey;
+    border-style: none;
+    border-radius: $border-main;
+    padding: .5em 1em;
+    transition: .3s;
+    .icon {
+        padding-left: .4em;
+        height: 1.3em;
+    }
+    &:hover {
+        background-color: rgb(36, 36, 36);
+    }
+}
+
+.form-btn.backwards .icon {
+    transform: rotateX(180deg);
+}
