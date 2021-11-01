@@ -15,34 +15,36 @@ export function FormFields(props) {
             setState(0);
     }, [state])
 
+    var Form = () => <div></div>;
+
     switch (state) {
         case 1:
-            return (
-                <div>
+            Form =
+                <>
                     <h1 className="from-subtitle">Wie heisst du?</h1>
-                    <FormButton onClick={() => setState(state - 1)} type="form-btn backwards" icon={arrow}/>
-                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow}/>
-                </div>
-            )
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn backwards" icon={arrow} />
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
+                </>;
+            break;
         case 2:
-            return (
-                <div>
+            Form =
+                <>
                     <h1>3</h1>
-                    <FormButton onClick={() => setState(state - 1)} type="form-btn" icon={arrow}/>
-                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow}/>
-                </div>
-            )
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn" icon={arrow} />
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
+                </>;
+            break;
         case 3:
-            return (
-                <div>
+            Form =
+                <>
                     <h1>4</h1>
-                    <FormButton onClick={() => setState(state - 1)} type="form-btn" icon={arrow}/>
-                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow}/>
-                </div>
-            )
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn" icon={arrow} />
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
+                </>;
+            break;
         default:
-            return (
-                <div>
+            Form =
+                <>
                     <h2 className="form-topic">Zusammen kreieren wir</h2>
                     <h1 className="from-title">
                         <Typewriter options={{
@@ -53,9 +55,13 @@ export function FormFields(props) {
                         }} />
                     </h1>
                     <FormButton onClick={() => setState(state + 1)} type="form-btn" label="Los geht's!" icon={arrow} />
-                </div>
-            )
+                </>;
+            break;
     }
+
+    return (<div>
+        {Form}
+    </div>);
 
 }
 
