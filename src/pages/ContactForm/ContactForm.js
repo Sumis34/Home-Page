@@ -9,19 +9,27 @@ import Typewriter from 'typewriter-effect'
 
 export function FormFields(props) {
     const [state, setState] = useState(0);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
 
     useEffect(() => {
         if (state > 3 || state < 0)
             setState(0);
     }, [state])
 
-    var Form = () => <div></div>;
+    var Form = () => <></>;
 
     switch (state) {
         case 1:
             Form =
                 <>
-                    <h1 className="from-subtitle">Wie heisst du?</h1>
+                    <label className="d-block">
+                        <h2 className="from-subtitle">Wie heisst du?</h2>
+                        <input type="text" placeholder="Max Muster" value={formData.name} name="name" onChange={(e) => setFormData({...formData, name: e.target.value})} />
+                    </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn backwards" icon={arrow} />
                     <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
                 </>;
@@ -59,9 +67,11 @@ export function FormFields(props) {
             break;
     }
 
-    return (<div>
-        {Form}
-    </div>);
+    return (
+        <Fade bottom cascade>
+            {Form}
+        </Fade>
+    );
 
 }
 
@@ -84,13 +94,13 @@ export default function ContactForm() {
 
 
     return (
-        <Fade bottom cascade>
-            <div className="contact-menu" >
+        <div className="contact-menu" >
+            <Fade bottom cascade>
                 <img src={x} alt="x" id="close-contact-menu" onClick={() => closeMenu()} />
-                <div className="form-content">
-                    <FormFields />
-                </div>
+            </Fade>
+            <div className="form-content">
+                <FormFields />
             </div>
-        </Fade>
+        </div>
     )
 }

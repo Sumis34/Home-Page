@@ -19,6 +19,21 @@ button.primary {
     }
 }
 
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 3px;
+    transition: 0.4s;
+    &::placeholder {
+        color: rgba(20, 20, 20, 0.438);
+    }
+    &:focus {
+        outline: none;
+        border-color: rgba(255, 255, 255, 0.589);
+        transition: .3s;
+    }
+}
+
 .underline {
     display: block;
     width: fit-content;
