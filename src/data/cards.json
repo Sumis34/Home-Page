@@ -1,0 +1,42 @@
+[{
+        "title": "Chasing winter",
+        "description": "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox",
+        "type": "Persönliches Projekt",
+        "img": "ski.png",
+        "textColor": "light",
+        "date": "Februar, 2021"
+    },
+    {
+        "title": "Engadin",
+        "description": "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox",
+        "type": "Persönliches Projekt",
+        "img": "engadin2.png",
+        "textColor": "light",
+        "date": "Juli, 2019"
+    },
+    {
+        "title": "The Beauty of FPV",
+        "description": "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox",
+        "type": "Persönliches Projekt",
+        "img": "fpv.png",
+        "textColor": "dark",
+        "date": "Juli, 2020"
+    },
+    {
+        "title": "UHC Grünenmatt",
+        "description": "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox",
+        "type": "Auftrag vom UHCG",
+        "img": "uhcg.png",
+        "textColor": "light",
+        "date": "Juni, 2020"
+    },
+    {
+        "title": "Zermatt",
+        "description": "The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox",
+        "type": "Persönliches Projekt",
+        "img": "zermatt.png",
+        "textColor": "dark",
+        "date": "Herbst, 2020"
+    }
+
+]
