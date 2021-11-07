@@ -19,7 +19,8 @@ function Cards() {
     const cards = cardData.map((d) =>
         <Card
             title={d.title}
-            description={d.type}
+            type={d.type}
+            textColor={d.textColor}
             link="http://google.ch"
             linkTitel="Video auf Youtube schauen"
             img={d.img}
