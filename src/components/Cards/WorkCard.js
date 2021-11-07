@@ -11,7 +11,7 @@ export default function WorkCard(props) {
             <div className="work-card-wrap">
                 <a href={props.link} className="work-card-link">{props.linkTitel}</a>
             </div>
-            <img src={props.img} alt="Logo" />
+            <img src={require(`../../assets/images/${props.img}`).default} alt="Logo" />
         </div>
     )
 }

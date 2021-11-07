@@ -11,6 +11,28 @@ import zermatt from '../../../assets/images/zermatt.png'
 import swipe from '../../../assets/icons/swipe.png'
 import arrow from '../../../assets/icons/right_arrow.svg'
 import blob from '../../../assets/design-elements/blob.svg'
+import cardData from '../../../data/cards.json'
+
+
+function Cards() {
+
+    const cards = cardData.map((d) =>
+        <Card
+            title={d.title}
+            description={d.type}
+            link="http://google.ch"
+            linkTitel="Video auf Youtube schauen"
+            img={d.img}
+            key={d.title}
+        />
+    );
+
+    return (
+        <>
+            {cards}
+        </>
+    );
+}
 
 export default function Work() {
 
@@ -25,57 +47,19 @@ export default function Work() {
     });
 
     return (
-        <>
-            <section id="work">
-                <div id="work-content">
-                    <Line />
-                    <h2>My work.</h2>
-                    <img src={blob} alt="..." id="work-blob" />
-                    <img src={swipe} alt="swipe" className="swipe animation" id="work-swipe" />
-                    <img src={arrow} alt="arrow" className="arrow" id="work-arrow" />
-                    <ScrollContainer className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
-                        <div className="cards" id="work-cards">
-                            <Card
-                                title="Engadin"
-                                description="Persönliches Projekt"
-                                link="http://google.ch"
-                                linkTitel="Video auf Youtube schauen"
-                                img={img}
-                            />
-                            <Card
-                                title="UHCG"
-                                description="Ein Auftrag vom UHCG"
-                                link="http://google.ch"
-                                linkTitel="Video auf Youtube schauen"
-                                img={uhcg}
-                            />
-                            <Card
-                                title="Chasing winter"
-                                description="Persönliches Projekt"
-                                link="http://google.ch"
-                                linkTitel="Video auf Youtube schauen"
-                                img={ski}
-                            />
-                            <Card
-                                title="The beauty of FPV"
-                                description="Persönliches Projekt"
-                                link="http://google.ch"
-                                linkTitel="Video auf Youtube schauen"
-                                img={fpv}
-                                type="dark"
-                            />
-                            <Card
-                                title="Zermatt"
-                                description="Persönliches Projekt"
-                                link="http://google.ch"
-                                linkTitel="Video auf Youtube schauen"
-                                img={zermatt}
-                                type="dark"
-                            />
-                        </div>
-                    </ScrollContainer>
-                </div>
-            </section>
-        </>
+        <section id="work">
+            <div id="work-content">
+                <Line />
+                <h2>My work.</h2>
+                <img src={blob} alt="..." id="work-blob" />
+                <img src={swipe} alt="swipe" className="swipe animation" id="work-swipe" />
+                <img src={arrow} alt="arrow" className="arrow" id="work-arrow" />
+                <ScrollContainer className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
+                    <div className="cards" id="work-cards">
+                        {Cards()}
+                    </div>
+                </ScrollContainer>
+            </div>
+        </section>
     )
 }
