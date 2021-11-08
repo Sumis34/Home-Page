@@ -87,14 +87,14 @@ function FormButton(props) {
 export default function ContactForm() {
     const history = useHistory();
 
-    function closeMenu() {
+    function closeForm() {
         history.goBack();
     }
 
     return (
         <div className="contact-menu" >
             <Fade bottom cascade>
-                <img src={x} alt="x" id="close-contact-menu" onClick={() => closeMenu()} />
+                <img src={x} alt="x" id="close-contact-menu" onClick={() => closeForm()} />
             </Fade>
             <div className="form-content">
                 <FormFields />

@@ -13,12 +13,10 @@ function App() {
       //Check browser theme
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         favicon.href = favBright;
-        console.log("Dark");
       }
 
       else {
         favicon.href = favDark;
-        console.log("Light");
       }
     };
 
