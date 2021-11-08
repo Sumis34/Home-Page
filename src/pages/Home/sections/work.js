@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import '../home.scss';
 import ScrollContainer from 'react-indiana-drag-scroll'
@@ -13,11 +13,13 @@ import cardData from '../../../data/cards.json'
 function Cards() {
 
     const history = useHistory();
+    const [isOpen, setOpen] = useState(false);
 
     const handleToggle = (id) => {
-        setTimeout(function () {
-            history.push("/video/" + id);
-        }, 700);
+        setOpen(!isOpen);
+
+        history.push("/video/" + id);
+
         console.log("Click!")
     };
 
@@ -64,7 +66,6 @@ export default function Work() {
                         {Cards()}
                     </div>
                 </ScrollContainer>
-                <div></div>
             </div>
         </section>
     )
