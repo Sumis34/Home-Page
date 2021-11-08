@@ -25,7 +25,7 @@ export default function ContactMenu() {
     return (
         <div>
             <ContactButton onClick={handleToggle} />
-            <circle className={`transition-circle ${isOpen ? "open" : ""}`}></circle>
+            <div className={`transition-circle ${isOpen ? "open" : ""}`} id="contact-circle"></div>
         </div>
     )
 }

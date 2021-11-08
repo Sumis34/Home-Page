@@ -88,10 +88,8 @@ export default function ContactForm() {
     const history = useHistory();
 
     function closeMenu() {
-        history.push("/");
+        history.goBack();
     }
-
-
 
     return (
         <div className="contact-menu" >

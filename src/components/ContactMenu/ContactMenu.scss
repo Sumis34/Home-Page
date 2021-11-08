@@ -1,21 +1,4 @@
 @import "../../colors.scss";
-.transition-circle {
-    z-index: 10000;
-    background-color: $primary;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    border-radius: 50%;
-    transform: translateX(50%) translateY(50%);
-    transition: .7s;
-    height: 0;
-    width: 0;
-    &.open {
-        height: 300%;
-        width: 300%;
-    }
-}
-
 #contact-btn {
     position: fixed;
     bottom: 3em;
@@ -25,4 +8,8 @@
     background-image: none;
     border: solid 2px $secondary;
     box-shadow: $soft-shadow;
+}
+
+#contact-circle {
+    background-color: $primary;
 }

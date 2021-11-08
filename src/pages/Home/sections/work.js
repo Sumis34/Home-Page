@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import '../home.scss';
 import ScrollContainer from 'react-indiana-drag-scroll'
 import Card from '../../../components/Cards/WorkCard'
@@ -11,7 +12,16 @@ import cardData from '../../../data/cards.json'
 
 function Cards() {
 
-    const cards = cardData.map((d) =>
+    const history = useHistory();
+
+    const handleToggle = (id) => {
+        setTimeout(function () {
+            history.push("/video/" + id);
+        }, 700);
+        console.log("Click!")
+    };
+
+    const cards = cardData.map((d, index) =>
         <Card
             title={d.title}
             type={d.type}
@@ -19,7 +29,9 @@ function Cards() {
             link="http://google.ch"
             linkTitel="Video auf Youtube schauen"
             img={d.img}
-            key={d.title}
+            key={index}
+            id={index}
+            onClick={handleToggle}
         />
     );
 
@@ -31,9 +43,6 @@ function Cards() {
 }
 
 export default function Work() {
-
-    //const [draged, setDraged] = useState(false);
-
     useEffect(() => {
         const cards = document.getElementById("work-cards");
         cards.addEventListener("mousedown", () => {
@@ -55,6 +64,7 @@ export default function Work() {
                         {Cards()}
                     </div>
                 </ScrollContainer>
+                <div></div>
             </div>
         </section>
     )
