@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './ContactForm.scss'
 import { useHistory } from 'react-router-dom'
-import x from '../../assets/icons/x-mark-thin.svg'
 import arrow from '../../assets/icons/thin-arrow.svg'
 import Fade from 'react-reveal/Fade'
 import Typewriter from 'typewriter-effect'
+import x from '../../assets/icons/x-mark-thin.svg'
 
 
 export function FormFields(props) {
