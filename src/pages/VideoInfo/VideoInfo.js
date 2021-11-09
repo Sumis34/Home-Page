@@ -31,13 +31,16 @@ export default function VideoInfo() {
             </Fade>
             <div className="video-content">
                 <div className="infos">
-                    <h1>Video id: {videoId}</h1>
-                    
+                    <h1>{videoInfo.title}</h1>
+                    <p>{videoInfo.description}</p>
+                    <p className="date">{videoInfo.date}</p>
                 </div>
                 <div className="video">
-
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/b4vF_8mZ320?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <img src={img} className="bg-image" alt="" />
+            </div>
+            <div className="bg-image">
+                <img src={img} alt="Background" />
             </div>
         </div>
     )
