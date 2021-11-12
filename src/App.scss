@@ -5,6 +5,11 @@
     overflow-x: hidden;
 }
 
+.close-btn {
+    position: relative;
+    z-index: 100;
+}
+
 button.primary {
     background: linear-gradient(90deg, $tertiary 0%, $primary 100%);
     font-size: 1em;
@@ -32,6 +37,12 @@ input {
         border-color: rgba(255, 255, 255, 0.589);
         transition: .3s;
     }
+}
+
+p.date {
+    color: $text-2;
+    font-weight: 200;
+    font-size: 1em;
 }
 
 .underline {

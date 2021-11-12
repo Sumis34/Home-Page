@@ -5,6 +5,7 @@ import VideoData from '../../data/cards.json'
 import { useHistory } from 'react-router-dom';
 import Fade from 'react-reveal/Fade'
 import x from '../../assets/icons/x-mark-thin-light.svg'
+import Reveal from 'react-reveal/Reveal'
 
 export default function VideoInfo() {
     const params = useParams();
@@ -26,15 +27,16 @@ export default function VideoInfo() {
 
     return (
         <div className="video-infos">
-            <Fade bottom cascade>
-                <img src={x} alt="x" id="close-contact-menu" onClick={() => closeForm()} />
-            </Fade>
+            <img src={x} alt="x" id="close-contact-menu" className="close-btn" onClick={() => closeForm()} />
+
             <div className="video-content">
-                <div className="infos">
-                    <h1>{videoInfo.title}</h1>
-                    <p>{videoInfo.description}</p>
-                    <p className="date">{videoInfo.date}</p>
-                </div>
+                <Reveal effect="fadeInUp">
+                    <div className="infos">
+                        <h1>{videoInfo.title}</h1>
+                        <p>{videoInfo.description}</p>
+                        <p className="date">{videoInfo.date}</p>
+                    </div>
+                </Reveal>
                 <div className="video">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/b4vF_8mZ320?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
