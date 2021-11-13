@@ -13,7 +13,8 @@ export default function VideoInfo() {
     let videoId = parseInt(params.id);
 
     function closeForm() {
-        history.goBack();
+        //history.goBack();
+        history.push('/');
     }
 
     if (typeof VideoData[videoId] === "undefined") {
