@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from '../../pages/Home/Home';
 import ContactForm from '../../pages/ContactForm/ContactForm'
 import VideoInfo from '../../pages/VideoInfo/VideoInfo'
-//import { motion, AnimatePresence } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 export default function Router() {
     return (

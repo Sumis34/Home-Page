@@ -38,7 +38,7 @@ export default function VideoInfo() {
                     </div>
                 </Fade>
                 <div className="video">
-                    <iframe src={videoInfo.link} title="YouTube video player" className="yt-video video-reveal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src={videoInfo.link} title="YouTube video player" className="yt-video video-reveal" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
             </div>
             <div className="bg-image">

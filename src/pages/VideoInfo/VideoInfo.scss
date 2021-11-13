@@ -3,6 +3,7 @@
     background-color: $bg-dark-grey;
     position: relative;
     height: 100vh;
+    overflow: hidden;
     width: 100vw;
     padding: $main-margin;
     .bg-image {
