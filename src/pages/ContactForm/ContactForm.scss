@@ -36,6 +36,7 @@
     border-style: none;
     border-radius: $border-main;
     padding: .5em 1em;
+    margin-right: 2em;
     transition: .3s;
     .icon {
         padding-left: .4em;
@@ -46,6 +47,10 @@
     }
 }
 
-.form-btn.backwards .icon {
-    transform: rotateX(180deg);
+.form-btn.back img.icon {
+    transform: rotateY(180deg);
+}
+
+.btn-outline:checked {
+    background-color: antiquewhite;
 }

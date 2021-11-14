@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 
 export default function Router() {
 
-    const wrapperVariants = {
+    const animationVariants = {
         initial: {
             clipPath: "circle(0% at 100% 100%)",
             opacity: 0,
@@ -44,7 +44,7 @@ export default function Router() {
                 </Route>
                 <Route path="/video/:id">
                     <motion.div
-                        variants={wrapperVariants}
+                        variants={animationVariants}
                         initial="initial"
                         animate="animate"
                         exit="exit"

@@ -5,7 +5,7 @@ import VideoData from '../../data/cards.json'
 import { useHistory } from 'react-router-dom';
 import x from '../../assets/icons/x-mark-thin-light.svg'
 import Fade from 'react-reveal/Fade'
-import Reveal from 'react-reveal/Reveal'
+//import Reveal from 'react-reveal/Reveal'
 
 export default function VideoInfo() {
     const params = useParams();

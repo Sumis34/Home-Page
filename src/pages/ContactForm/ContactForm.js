@@ -5,22 +5,31 @@ import arrow from '../../assets/icons/thin-arrow.svg'
 import Fade from 'react-reveal/Fade'
 import Typewriter from 'typewriter-effect'
 import x from '../../assets/icons/x-mark-thin.svg'
-
+import { motion } from 'framer-motion'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import { ToggleButton } from 'react-bootstrap'
 
 export function FormFields(props) {
     const [state, setState] = useState(0);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        targetGroup: 0
     });
 
-    useEffect(() => {
-        if (state > 3 || state < 0)
-            setState(0);
-    }, [state])
+    const radios = [
+        { name: 'Active', value: '1' },
+        { name: 'Radio', value: '2' },
+        { name: 'Radio', value: '3' },
+    ];
 
-    var Form = () => <></>;
+    useEffect(() => {
+        if (state > 4 || state < 0)
+            setState(0);
+    }, [state]);
+
+    let Form = () => <></>;
 
     switch (state) {
         case 1:
@@ -28,27 +37,59 @@ export function FormFields(props) {
                 <>
                     <label className="d-block">
                         <h2 className="from-subtitle">Wie heisst du?</h2>
-                        <input type="text" placeholder="Max Muster" value={formData.name} name="name" onChange={(e) => setFormData({...formData, name: e.target.value})} />
+                        <input type="text" placeholder="Max Muster" value={formData.name} name="name" onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
                     </label>
-                    <FormButton onClick={() => setState(state - 1)} type="form-btn backwards" icon={arrow} />
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
                     <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
                 </>;
             break;
         case 2:
             Form =
                 <>
-                    <h1>3</h1>
-                    <FormButton onClick={() => setState(state - 1)} type="form-btn" icon={arrow} />
+                    <label className="d-block">
+                        <h2 className="from-subtitle">Wie lautet dein E-Mail?</h2>
+                        <input type="email" placeholder="max@muster.ch" value={formData.email} name="email" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                    </label>
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
                     <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
                 </>;
             break;
         case 3:
             Form =
                 <>
-                    <h1>4</h1>
-                    <FormButton onClick={() => setState(state - 1)} type="form-btn" icon={arrow} />
+                    <label className="d-block">
+                        <h2 className="from-subtitle">Kurzbeschrieb deines Projektes</h2>
+                        <textarea type="text" style={{ resize: "none" }} placeholder="Ich habe mir vorgestellt..." rows="10" cols="70" value={formData.message} name="message" onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+                    </label>
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
                     <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
                 </>;
+            break;
+        case 4:
+            Form =
+                <>
+                    <label className="d-block">
+                        <h2 className="from-subtitle">Shess</h2>
+                        <ButtonGroup>
+                            {radios.map((radio, idx) => (
+                                <ToggleButton
+                                    key={idx}
+                                    id={`radio-${idx}`}
+                                    type="radio"
+                                    variant={'outline-danger'}
+                                    name="radio"
+                                    value={radio.value}
+                                    checked={formData.targetGroup === radio.value}
+                                    onChange={(e) => setFormData({ ...formData, targetGroup: e.currentTarget.value })}
+                                >
+                                    {radio.name}
+                                </ToggleButton>
+                            ))}
+                        </ButtonGroup>
+                    </label>
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
+                </>
             break;
         default:
             Form =
@@ -68,9 +109,9 @@ export function FormFields(props) {
     }
 
     return (
-        <Fade bottom cascade>
+        <>
             {Form}
-        </Fade>
+        </>
     );
 
 }
@@ -91,13 +132,26 @@ export default function ContactForm() {
         history.goBack();
     }
 
+    const variants = {
+        inital: { opacity: 0 },
+        animate: { opacity: 1 },
+        exit: { opacity: 0 }
+    }
+
     return (
         <div className="contact-menu" >
             <Fade bottom cascade>
                 <img src={x} alt="x" id="close-contact-menu" onClick={() => closeForm()} />
             </Fade>
             <div className="form-content">
-                <FormFields />
+                <motion.div
+                    variants={variants}
+                    inital="inital"
+                    animate="animate"
+                    exit="exit"
+                >
+                    <FormFields />
+                </motion.div>
             </div>
         </div>
     )
