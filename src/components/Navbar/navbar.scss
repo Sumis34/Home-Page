@@ -41,7 +41,7 @@ nav {
 }
 
 .scrolled {
-    background-color: $bg-medium-grey;
+    background-color: $bg-dark-grey;
     padding: 1.2em;
 }
 
@@ -54,7 +54,7 @@ nav {
     display: none;
 }
 
-.close {
+#close-nav {
     visibility: hidden;
 }
 
@@ -100,7 +100,7 @@ nav {
             transform: translateX(30%);
         }
     }
-    .close {
+    #close-nav {
         visibility: visible;
         color: $text-1;
         font-size: 2em;

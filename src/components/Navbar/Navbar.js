@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { NavHashLink as Link}  from "react-router-hash-link";
 import './navbar.scss';
 import logo from '../../assets/images/nk-logo_bright.png';
+import x from '../../assets/icons/x-mark-thin-light.svg'
 //import cross from '../../assets/icons/cross.svg';
 
 export function NavLinks() {
@@ -42,7 +43,7 @@ export default function Nav() {
                     <Link to="/"><img className="logo" src={logo} alt="logo" /></Link><i className="fas fa-bars burger" onClick={() => handleToggle()}></i>
                 </div>
                 <nav className={`mobile ${isActive ? "active" : ""}`}>
-                    <i className="fas fa-times close" onClick={() => handleToggle()}></i>
+                <img src={x} alt="x" id="close-nav" className="close-btn" onClick={() => handleToggle()} />
                     <ul>
                         <NavLinks />
                     </ul>
