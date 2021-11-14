@@ -6,8 +6,7 @@ import Fade from 'react-reveal/Fade'
 import Typewriter from 'typewriter-effect'
 import x from '../../assets/icons/x-mark-thin.svg'
 import { motion } from 'framer-motion'
-import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import { ToggleButton } from 'react-bootstrap'
+import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 
 export function FormFields(props) {
     const [state, setState] = useState(0);
@@ -19,9 +18,11 @@ export function FormFields(props) {
     });
 
     const radios = [
-        { name: 'Active', value: '1' },
-        { name: 'Radio', value: '2' },
-        { name: 'Radio', value: '3' },
+        { name: 'Unter 18', value: 1 },
+        { name: '18-25', value: 2 },
+        { name: '25-39', value: 3 },
+        { name: '40-64', value: 4 },
+        { name: '65+', value: 5 }
     ];
 
     useEffect(() => {
@@ -69,14 +70,14 @@ export function FormFields(props) {
             Form =
                 <>
                     <label className="d-block">
-                        <h2 className="from-subtitle">Shess</h2>
-                        <ButtonGroup>
+                        <h2 className="from-subtitle">Zielgruppe</h2>
+                        <ToggleButtonGroup type="radio" name="options" defaultValue={2} className="targetGroup-buttons">
                             {radios.map((radio, idx) => (
                                 <ToggleButton
                                     key={idx}
                                     id={`radio-${idx}`}
                                     type="radio"
-                                    variant={'outline-danger'}
+                                    variant={'outline'}
                                     name="radio"
                                     value={radio.value}
                                     checked={formData.targetGroup === radio.value}
@@ -85,7 +86,7 @@ export function FormFields(props) {
                                     {radio.name}
                                 </ToggleButton>
                             ))}
-                        </ButtonGroup>
+                        </ToggleButtonGroup>
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
                     <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />

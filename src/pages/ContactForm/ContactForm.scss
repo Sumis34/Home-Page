@@ -9,6 +9,9 @@
         font-weight: 900;
         margin-bottom: .3em;
     }
+    .btn-group {
+        margin: 1em 0;
+    }
 }
 
 .form-content {
@@ -49,8 +52,4 @@
 
 .form-btn.back img.icon {
     transform: rotateY(180deg);
-}
-
-.btn-outline:checked {
-    background-color: antiquewhite;
 }

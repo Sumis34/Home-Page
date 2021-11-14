@@ -102,6 +102,18 @@ p.date {
     animation-name: fadeInUp;
 }
 
+.btn-outline {
+    border: solid 2px $text-1;
+    border-radius: 10px;
+    color: $tertiary;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.btn-check:checked+.btn-outline {
+    background-color: $text-1;
+}
+
 @keyframes fadeInUp {
     0% {
         opacity: 0;
