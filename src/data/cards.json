@@ -5,7 +5,7 @@
         "img": "ski.png",
         "textColor": "light",
         "date": "Februar, 2021",
-        "link": "https://www.youtube-nocookie.com/embed/b4vF_8mZ320?controls=0"
+        "link": "https://www.youtube-nocookie.com/embed/b4vF_8mZ320"
     },
     {
         "title": "Engadin",
@@ -14,7 +14,7 @@
         "img": "engadin2.png",
         "textColor": "light",
         "date": "Juli, 2019",
-        "link": "https://www.youtube-nocookie.com/embed/n-j2Ti0xNUk?controls=0"
+        "link": "https://www.youtube-nocookie.com/embed/n-j2Ti0xNUk"
     },
     {
         "title": "The Beauty of FPV",
@@ -23,7 +23,7 @@
         "img": "fpv.png",
         "textColor": "dark",
         "date": "Juli, 2020",
-        "link": "https://www.youtube-nocookie.com/embed/pIfrQRlbPRQ?controls=0"
+        "link": "https://www.youtube-nocookie.com/embed/pIfrQRlbPRQ"
     },
     {
         "title": "UHC Grünenmatt",
@@ -32,7 +32,7 @@
         "img": "uhcg.png",
         "textColor": "light",
         "date": "Juni, 2020",
-        "link": "https://www.youtube-nocookie.com/embed/dhZPEW9qWYI?controls=0"
+        "link": "https://www.youtube-nocookie.com/embed/dhZPEW9qWYI"
     },
     {
         "title": "Zermatt",
@@ -41,7 +41,7 @@
         "img": "zermatt.png",
         "textColor": "dark",
         "date": "Herbst, 2020",
-        "link": "https://www.youtube-nocookie.com/embed/rZ4ePq0SAao?controls=0"
+        "link": "https://www.youtube-nocookie.com/embed/rZ4ePq0SAao"
     }
 
 ]
