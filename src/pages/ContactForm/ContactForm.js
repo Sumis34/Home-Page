@@ -7,6 +7,7 @@ import Typewriter from 'typewriter-effect'
 import x from '../../assets/icons/x-mark-thin.svg'
 import { motion } from 'framer-motion'
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
+import ValidationService from '../../services/ValidationService'
 
 export function FormFields(props) {
     const [state, setState] = useState(0);
@@ -30,6 +31,18 @@ export function FormFields(props) {
             setState(0);
     }, [state]);
 
+    function forwarForm(validationMathod, value){
+
+        let error = ValidationService[validationMathod](value)
+
+        if(!error){
+            setState(state + 1)
+            console.log("ok")
+        } else{
+            console.log(error)
+        }
+    }
+
     let Form = () => <></>;
 
     switch (state) {
@@ -41,7 +54,7 @@ export function FormFields(props) {
                         <input type="text" placeholder="Max Muster" value={formData.name} name="name" onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
-                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
+                    <FormButton onClick={() => forwarForm("validateName", formData.name)} type="form-btn" icon={arrow} />
                 </>;
             break;
         case 2:
