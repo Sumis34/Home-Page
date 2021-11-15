@@ -37,9 +37,7 @@ export function FormFields(props) {
 
         if(!error){
             setState(state + 1)
-            console.log("ok")
         } else{
-            console.log(error)
         }
     }
 
@@ -65,7 +63,7 @@ export function FormFields(props) {
                         <input type="email" placeholder="max@muster.ch" value={formData.email} name="email" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
-                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
+                    <FormButton onClick={() => forwarForm("validateEmail", formData.email)} type="form-btn" icon={arrow} />
                 </>;
             break;
         case 3:
