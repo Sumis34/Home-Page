@@ -11,6 +11,7 @@ import ValidationService from '../../services/ValidationService'
 
 export function FormFields(props) {
     const [state, setState] = useState(0);
+    const [error, setError] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -31,13 +32,15 @@ export function FormFields(props) {
             setState(0);
     }, [state]);
 
-    function forwarForm(validationMathod, value){
+    const forwarForm  = (validationMathod, value) => {
 
         let error = ValidationService[validationMathod](value)
 
         if(!error){
             setState(state + 1)
+            setError(false)
         } else{
+            setError(error)
         }
     }
 
@@ -49,7 +52,7 @@ export function FormFields(props) {
                 <>
                     <label className="d-block">
                         <h2 className="from-subtitle">Wie heisst du?</h2>
-                        <input type="text" placeholder="Max Muster" value={formData.name} name="name" onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+                        <input type="text" placeholder="Max Muster" className={error ? "error" : ""} value={formData.name} name="name" onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
                     <FormButton onClick={() => forwarForm("validateName", formData.name)} type="form-btn" icon={arrow} />
@@ -60,7 +63,7 @@ export function FormFields(props) {
                 <>
                     <label className="d-block">
                         <h2 className="from-subtitle">Wie lautet dein E-Mail?</h2>
-                        <input type="email" placeholder="max@muster.ch" value={formData.email} name="email" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
+                        <input type="email" placeholder="max@muster.ch" className={error ? "error" : ""} value={formData.email} name="email" onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
                     <FormButton onClick={() => forwarForm("validateEmail", formData.email)} type="form-btn" icon={arrow} />
@@ -71,10 +74,10 @@ export function FormFields(props) {
                 <>
                     <label className="d-block">
                         <h2 className="from-subtitle">Kurzbeschrieb deines Projektes</h2>
-                        <textarea type="text" style={{ resize: "none" }} placeholder="Ich habe mir vorgestellt..." rows="10" cols="70" value={formData.message} name="message" onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+                        <textarea type="text" style={{ resize: "none" }} placeholder="Ich habe mir vorgestellt..." className={error ? "error" : ""} rows="10" cols="70" value={formData.message} name="message" onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
-                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
+                    <FormButton onClick={() => forwarForm("validateMsg", formData.message)} type="form-btn" icon={arrow} />
                 </>;
             break;
         case 4:

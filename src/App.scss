@@ -43,6 +43,9 @@ textarea {
         border-color: rgba(255, 255, 255, 0.589);
         transition: .3s;
     }
+    &.error {
+        border-color: #ff3a3a;
+    }
 }
 
 p.date {

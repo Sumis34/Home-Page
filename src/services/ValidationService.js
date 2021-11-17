@@ -1,12 +1,16 @@
 const validationErrors = {
-    empty: "Bitte gibt einen Namen ein.",
+    emptyName: "Bitte gibt einen Namen ein.",
     notFullName: "Bitte gib vor und nachname ein.",
     nameToLong: "Name zu lang.",
-    invalidEmail: "Ungültige E-Mail."
+    invalidEmail: "Ungültige E-Mail.",
+    emptyMsg: "Gib eine nachricht ein um fortzufahren.",
+    empty: "Fülle das feld aus um fortzufahren.",
+    msgToLong: "Deine nachricht ist zu lang.",
 }
 
 const patterns = {
-    email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    // eslint-disable-next-line
+    email: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ 
 }
 
 const ValidationService = {
@@ -15,11 +19,24 @@ const ValidationService = {
         let error = true;
 
         if(value.length < 1)
-            error =  validationErrors.empty
+            error =  validationErrors.emptyName
         else if (value.length > 30)
             error = validationErrors.nameToLong
         else if (value.split(' ').length <= 1)
             error = validationErrors.notFullName
+        else
+            error = false
+
+        return error 
+    },
+
+    validateMsg: (value) => {
+        let error = true;
+
+        if(value.length < 1)
+            error =  validationErrors.empty
+        else if (value.length > 250)
+            error = validationErrors.msgToLong
         else
             error = false
 
