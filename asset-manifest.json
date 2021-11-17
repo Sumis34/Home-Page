@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.075803f0.chunk.css",
-    "main.js": "/static/js/main.8af4b206.chunk.js",
-    "main.js.map": "/static/js/main.8af4b206.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.881e0aa4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.881e0aa4.js.map",
+    "main.css": "/static/css/main.c56f056f.chunk.css",
+    "main.js": "/static/js/main.405759f2.chunk.js",
+    "main.js.map": "/static/js/main.405759f2.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8c8ebe28.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8c8ebe28.js.map",
     "static/css/2.f2512455.chunk.css": "/static/css/2.f2512455.chunk.css",
-    "static/js/2.46f12f12.chunk.js": "/static/js/2.46f12f12.chunk.js",
-    "static/js/2.46f12f12.chunk.js.map": "/static/js/2.46f12f12.chunk.js.map",
-    "static/js/3.bd2f407f.chunk.js": "/static/js/3.bd2f407f.chunk.js",
-    "static/js/3.bd2f407f.chunk.js.map": "/static/js/3.bd2f407f.chunk.js.map",
+    "static/js/2.33af6fbe.chunk.js": "/static/js/2.33af6fbe.chunk.js",
+    "static/js/2.33af6fbe.chunk.js.map": "/static/js/2.33af6fbe.chunk.js.map",
+    "static/js/3.afff7dcd.chunk.js": "/static/js/3.afff7dcd.chunk.js",
+    "static/js/3.afff7dcd.chunk.js.map": "/static/js/3.afff7dcd.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.f2512455.chunk.css.map": "/static/css/2.f2512455.chunk.css.map",
-    "static/css/main.075803f0.chunk.css.map": "/static/css/main.075803f0.chunk.css.map",
-    "static/js/2.46f12f12.chunk.js.LICENSE.txt": "/static/js/2.46f12f12.chunk.js.LICENSE.txt",
+    "static/css/main.c56f056f.chunk.css.map": "/static/css/main.c56f056f.chunk.css.map",
+    "static/js/2.33af6fbe.chunk.js.LICENSE.txt": "/static/js/2.33af6fbe.chunk.js.LICENSE.txt",
     "static/media/FebruarWeb-1.f527c7c6.m4v": "/static/media/FebruarWeb-1.f527c7c6.m4v",
     "static/media/bg-main-2.png": "/static/media/bg-main-2.73ef08b0.png",
     "static/media/bg-main.png": "/static/media/bg-main.1d9af14c.png",
@@ -41,10 +41,10 @@
     "static/media/zermatt.png": "/static/media/zermatt.a3eae005.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.881e0aa4.js",
+    "static/js/runtime-main.8c8ebe28.js",
     "static/css/2.f2512455.chunk.css",
-    "static/js/2.46f12f12.chunk.js",
-    "static/css/main.075803f0.chunk.css",
-    "static/js/main.8af4b206.chunk.js"
+    "static/js/2.33af6fbe.chunk.js",
+    "static/css/main.c56f056f.chunk.css",
+    "static/js/main.405759f2.chunk.js"
   ]
 }
