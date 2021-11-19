@@ -26,9 +26,6 @@ section#contact {
         background-color: $primary;
     }
     .contact-cont {
-        margin: 0 auto;
-        max-width: $max-width;
-        padding: 2em $main-margin;
         display: flex;
         flex-direction: column;
     }
@@ -66,17 +63,11 @@ section#philosophie {
         z-index: 0;
     }
     .content {
-        max-width: $max-width;
-        margin: 0 auto;
-        padding: 25% $main-margin;
-        position: relative;
         z-index: 10;
         text-align: end;
+        padding: 25% $main-margin;
         p {
             width: 100%;
-        }
-        .line-flex {
-            justify-content: flex-end;
         }
     }
 }
@@ -90,3 +81,5 @@ section#philosophie::after {
     top: 0;
     background: linear-gradient(0deg, $bg-dark-grey 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 55%, $bg-dark-grey 100%);
 }
+
+section#about-me {}
