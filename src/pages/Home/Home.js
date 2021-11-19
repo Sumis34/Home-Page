@@ -5,6 +5,7 @@ import Footer from '../../components/Footer/Footer.js';
 import Work from './sections/work'
 import Contact from './sections/contact'
 import Philosophie from './sections/philosophie'
+import About from './sections/about'
 import ContactMenu from '../../components/ContactMenu/ContactMenu'
 import Navbar from '../../components/Navbar/Navbar'
 // import Waves from '../../assets/design-elements/waves-5.svg';
@@ -21,6 +22,7 @@ export default function Home() {
             <Work />
             <Philosophie />
             <Contact />
+            <About />
             <div className="home" id="home"></div>
             <ContactMenu />
             <Footer />

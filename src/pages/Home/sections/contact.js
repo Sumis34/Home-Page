@@ -14,7 +14,7 @@ export default function contact() {
                 <img src={blob} alt="..." id="blob" />
                 <img src={waveTop} alt="wave-top" id="wave-top" />
                 <div className="contact-bg">
-                    <div className="contact-cont">
+                    <div className="contact-cont content">
                         <Reveal effect="fadeInUp">
                             <div className="contact-header">
                                 <h2>Hast du eine Vision?</h2>
