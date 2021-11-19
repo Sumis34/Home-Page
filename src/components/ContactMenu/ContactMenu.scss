@@ -8,6 +8,9 @@
     background-image: none;
     border: solid 2px $secondary;
     box-shadow: $soft-shadow;
+    &.hidden {
+        bottom: -3em;
+    }
 }
 
 #contact-circle {

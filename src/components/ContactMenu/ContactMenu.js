@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useHistory } from 'react-router-dom';
 import './ContactMenu.scss';
 
 export function ContactButton(props) {
+    useEffect(() => {
+        window.addEventListener("scroll", () =>{
+            const btn = document.getElementById("contact-btn");
+            if (btn)
+                btn.classList.toggle("hidden", window.scrollY < 100);
+        });
+    });
+
     return (
-        <button className="primary" id="contact-btn" onClick={props.onClick}>
+        <button className="primary hidden" id="contact-btn" onClick={props.onClick}>
             Projekt starten?👋
         </button>
     )

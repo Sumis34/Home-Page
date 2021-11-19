@@ -103,7 +103,7 @@ export function FormFields(props) {
                         </ToggleButtonGroup>
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
-                    <FormButton onClick={() => setState(state + 1)} type="form-btn" icon={arrow} />
+                    <FormButton onClick={() => setState(state + 1)} type="form-btn" label="Senden!" icon={arrow} />
                 </>
             break;
         default:
