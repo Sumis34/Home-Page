@@ -12,10 +12,13 @@ export function NavLinks() {
                 <Link to="/#top" activeClassName="active-nav-link">Home</Link>
             </li>
             <li>
-                <Link to="/home#work" activeClassName="active-nav-link">My work</Link>
+                <Link to="/#work" activeClassName="active-nav-link">My work</Link>
             </li>
             <li>
-                <Link to="/home#contact" activeClassName="active-nav-link">Hire me</Link>
+                <Link to="/#contact" activeClassName="active-nav-link">Hire me</Link>
+            </li>
+            <li>
+                <Link to="/#about-me" activeClassName="active-nav-link">Über mich</Link>
             </li>
         </>
     )

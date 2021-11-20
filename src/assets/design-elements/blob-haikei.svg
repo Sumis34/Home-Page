@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="750.458" height="445.358" viewBox="0 0 750.458 445.358">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.98" x2="0.656" y2="0.192" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7b7efd" stop-opacity="0.631"/>
+      <stop offset="1" stop-color="#161876" stop-opacity="0.561"/>
+    </linearGradient>
+  </defs>
+  <g id="blob-haikei" transform="translate(-697.123 -2384.818)">
+    <g id="Gruppe_8" data-name="Gruppe 8" transform="translate(697.123 2384.818)">
+      <path id="Pfad_4" data-name="Pfad 4" class="cls-1" d="M462.738-158.612c89.2,48.37,158.077,99.449,141.48,142.789S485.35,63.021,396.147,104.522c-89.2,41.4-165.337,88.711-249.977,92.58S-31.406,161.405-83.269,120s-62.65-84.745-60.16-126.923,18.048-83.293,69.91-131.664,140.028-104,238.774-109.026,208.279,40.631,297.483,89" transform="translate(143.759 247.993)"/>
+    </g>
+  </g>
+</svg>

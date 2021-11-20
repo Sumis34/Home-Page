@@ -82,4 +82,25 @@ section#philosophie::after {
     background: linear-gradient(0deg, $bg-dark-grey 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 55%, $bg-dark-grey 100%);
 }
 
-section#about-me {}
+section#about-me {
+    .content {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(auto-fill, minmax(20em, 35em));
+        #img-noe {
+            position: relative;
+            width: 70%;
+            z-index: 10;
+        }
+        .image::before {
+            content: url('../../../assets/design-elements/blob-haikei.svg');
+            position: absolute;
+            transform: rotate(157deg);
+            top: 40%;
+            left: 45%;
+        }
+    }
+    p {
+        width: 100%;
+    }
+}
