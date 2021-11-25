@@ -1,4 +1,3 @@
-import React from 'react'
 import bg from '../../../assets/images/forest.png'
 import Line from '../../../components/AccentLine/AccentLine'
 import Reveal from 'react-reveal/Reveal'

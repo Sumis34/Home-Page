@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Line from '../../../components/AccentLine/AccentLine'
 import Reveal from 'react-reveal/Reveal'
 import noe from '../../../assets/images/noe.png'
-import Moment from 'react-moment'
+//import Moment from 'react-moment'
 
 export default function About() {
+
+    const [offset, setOffset] = useState(0);
+
+    useEffect(() => {
+        window.onscroll = () => {
+            setOffset(window.pageYOffset)
+        }
+    }, []);
+
     return (
         <>
             <section id="about-me">
@@ -18,7 +27,7 @@ export default function About() {
                             </p>
                         </div>
                         <div className="image">
-                            <img src={noe} alt="noe" id="img-noe"/>
+                            <img src={noe} alt="noe" id="img-noe" />
                         </div>
                     </div>
                 </Reveal>

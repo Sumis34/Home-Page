@@ -37,11 +37,9 @@ section#contact {
         column-gap: 20%;
         row-gap: 3em;
         margin-top: 5em;
-        padding-left: 2em;
         .info-text {
             position: absolute;
-            top: 53%;
-            transform: translateX(30%);
+            transform: translateY(-230%);
         }
     }
     .contact-icon {
@@ -87,17 +85,25 @@ section#about-me {
         display: grid;
         grid-gap: 1em;
         grid-template-columns: repeat(auto-fill, minmax(20em, 35em));
+        justify-content: space-between;
         #img-noe {
             position: relative;
             width: 70%;
             z-index: 10;
+            display: flex;
+            margin: 0 auto;
         }
         .image::before {
-            content: url('../../../assets/design-elements/blob-haikei.svg');
+            content: "";
+            background-image: url('../../../assets/design-elements/blob-haikei.svg');
+            background-size: 100% 100%;
+            display: inline-block;
+            height: 80%;
+            width: 45%;
             position: absolute;
             transform: rotate(157deg);
             top: 40%;
-            left: 45%;
+            left: 50%;
         }
     }
     p {
