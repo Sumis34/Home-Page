@@ -25,7 +25,7 @@ export function NavLinks() {
 }
 
 export default function Nav() {
-    const [isActive, setActive] = useState("true");
+    const [isActive, setActive] = useState(false);
 
     const handleToggle = () => {
         setActive(!isActive);
