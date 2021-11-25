@@ -156,7 +156,7 @@ export default function ContactForm() {
     return (
         <div className="contact-menu" >
             <Fade bottom cascade>
-                <img src={x} alt="x" id="close-contact-menu" onClick={() => closeForm()} />
+                <img src={x} alt="x" id="close-contact-menu" className="close-btn" onClick={() => closeForm()} />
             </Fade>
             <div className="form-content">
                 <motion.div
