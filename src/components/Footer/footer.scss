@@ -1,11 +1,14 @@
 @import '../../colors.scss';
-
-footer{
-    background-color: $bg-medium-grey;
-    //height: 30vh;
+footer {
+    background-color: $bg-darker-grey;
+    p {
+        padding: 3em;
+        text-align: center;
+        margin: 0;
+    }
 }
 
-.top-footer{
+.top-footer {
     display: flex;
     flex-direction: column;
 }

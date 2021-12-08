@@ -11,6 +11,7 @@ export default function About() {
     useEffect(() => {
         window.onscroll = () => {
             setOffset(window.pageYOffset)
+            
         }
     }, []);
 
