@@ -48,10 +48,14 @@ export default function Work() {
     useEffect(() => {
         const cards = document.getElementById("work-cards");
         cards.addEventListener("mousedown", () => {
-            const swipe = document.getElementById("work-swipe");
-            swipe.classList.remove("animation");
+            removeSwipe();
         });
     }, []);
+
+    const removeSwipe = () => {
+        const swipe = document.getElementById("work-swipe");
+        swipe.classList.remove("animation");
+    }
 
     const scrollToTop = () => {
         const cardCount = cardData.length
@@ -59,6 +63,7 @@ export default function Work() {
         const width = scrollElement.offsetWidth * 2
         const scrollOffset = scrollElement.scrollLeft + (width / cardCount)
         scrollElement.scrollTo({ left: scrollOffset, behavior: 'smooth' });
+        removeSwipe();
     };
 
     return (
