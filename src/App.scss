@@ -126,3 +126,12 @@ p.date {
         transform: translateY(0%)
     }
 }
+
+@media only screen and (max-width: $screen-md) {
+    p {
+        font-size: 1rem !important;
+    }
+    .hidden-on-mobile {
+        visibility: hidden !important;
+    }
+}

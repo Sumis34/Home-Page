@@ -110,3 +110,9 @@ section#about-me {
         width: 100%;
     }
 }
+
+@media only screen and (max-width: $screen-md) {
+    section#philosophie {
+        margin-top: 0;
+    }
+}

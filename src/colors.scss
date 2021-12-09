@@ -25,6 +25,8 @@ $max-width: 1400px;
 $soft-shadow: 14px 12px 47px -8px #000000;
 $img-gradient-right: linear-gradient(90deg, $bg-dark-grey 0%, rgba(0, 0, 0, 0) 60%);
 $img-gradient-bottom: linear-gradient(180deg, $bg-dark-grey 0%, rgba(0, 0, 0, 0) 60%);
+//screen
+$screen-md: 768px;
 //Media query overwrite
 @media only screen and (max-width: 400px) {
     //$main-margin: 1em !global;

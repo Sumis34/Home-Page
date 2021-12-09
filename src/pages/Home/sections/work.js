@@ -71,7 +71,7 @@ export default function Work() {
             <div id="work-content">
                 <Line />
                 <h2>My work.</h2>
-                <img src={blob} alt="..." id="work-blob" />
+                <img src={blob} alt="..." id="work-blob" className="hidden-on-mobile"/>
                 <img src={swipe} alt="swipe" className="swipe animation" id="work-swipe" />
                 <img src={arrow} alt="arrow" className="arrow" id="work-arrow" onClick={() => scrollToTop()} />
                 <ScrollContainer id="card-scroll" className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
