@@ -17,15 +17,13 @@ iframe.yt-video {
 }
 
 button.primary {
-    background: linear-gradient(90deg, $tertiary 0%, $primary 100%);
+    background-color: $primary;
     font-size: 1em;
     border-radius: $border-main;
     border-style: none;
     padding: 0.4em 1em;
     transition: 0.4s;
-    filter: saturate(0.6);
     &:hover {
-        filter: saturate(1);
         transition: 0.4s;
     }
 }

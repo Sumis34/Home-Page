@@ -3,6 +3,7 @@ import { NavHashLink as Link}  from "react-router-hash-link";
 import './navbar.scss';
 import logo from '../../assets/images/nk-logo_bright.png';
 import x from '../../assets/icons/x-mark-thin-light.svg'
+import ScrollspyNav from "react-scrollspy-nav";
 //import cross from '../../assets/icons/cross.svg';
 
 export function NavLinks() {

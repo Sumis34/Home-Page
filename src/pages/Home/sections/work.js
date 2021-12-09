@@ -51,7 +51,15 @@ export default function Work() {
             const swipe = document.getElementById("work-swipe");
             swipe.classList.remove("animation");
         });
-    });
+    }, []);
+
+    const scrollToTop = () => {
+        const cardCount = cardData.length
+        const scrollElement = document.querySelector("#work-content > div.scroll-container.indiana-scroll-container.indiana-scroll-container--hide-scrollbars.indiana-scroll-container.indiana-scroll-container--hide-scrollbars")
+        const width = scrollElement.offsetWidth * 2
+        const scrollOffset = scrollElement.scrollLeft + (width / cardCount)
+        scrollElement.scrollTo({ left: scrollOffset, behavior: 'smooth' });
+    };
 
     return (
         <section id="work">
@@ -60,8 +68,8 @@ export default function Work() {
                 <h2>My work.</h2>
                 <img src={blob} alt="..." id="work-blob" />
                 <img src={swipe} alt="swipe" className="swipe animation" id="work-swipe" />
-                <img src={arrow} alt="arrow" className="arrow" id="work-arrow" />
-                <ScrollContainer className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
+                <img src={arrow} alt="arrow" className="arrow" id="work-arrow" onClick={() => scrollToTop()} />
+                <ScrollContainer id="card-scroll" className="scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars" horizontal={true}>
                     <div className="cards" id="work-cards">
                         {Cards()}
                     </div>
