@@ -8,10 +8,12 @@ import x from '../../assets/icons/x-mark-thin.svg'
 import { motion } from 'framer-motion'
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import ValidationService from '../../services/ValidationService'
+import axios from 'axios'
 
 export function FormFields(props) {
     const [state, setState] = useState(0);
     const [error, setError] = useState(false);
+    const baseUrl = process.env.REACT_APP_API_URL;
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -28,20 +30,28 @@ export function FormFields(props) {
     ];
 
     useEffect(() => {
-        if (state > 4 || state < 0)
+        if (state > 5 || state < 0)
             setState(0);
     }, [state]);
 
-    const forwarForm  = (validationMathod, value) => {
+    const forwarForm = (validationMathod, value) => {
 
         let error = ValidationService[validationMathod](value)
 
-        if(!error){
+        if (!error) {
             setState(state + 1)
             setError(false)
-        } else{
+        } else {
             setError(error)
         }
+    }
+
+    const send = (formData) => {
+        console.log(formData);
+        axios.post(baseUrl + '/send/', formData)
+            .then(data => {
+                console.log(data);
+            });
     }
 
     let Form = () => <></>;
@@ -101,6 +111,16 @@ export function FormFields(props) {
                                 </ToggleButton>
                             ))}
                         </ToggleButtonGroup>
+                    </label>
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
+                    <FormButton onClick={() => send(formData)} type="form-btn" label="Senden!" icon={arrow} />
+                </>
+            break;
+        case 5:
+            Form =
+                <>
+                    <label className="d-block">
+                        <h2 className="from-subtitle">Verify</h2>
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
                     <FormButton onClick={() => setState(state + 1)} type="form-btn" label="Senden!" icon={arrow} />
