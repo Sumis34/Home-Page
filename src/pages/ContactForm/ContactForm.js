@@ -14,11 +14,14 @@ export function FormFields(props) {
     const [state, setState] = useState(0);
     const [error, setError] = useState(false);
     const baseUrl = process.env.REACT_APP_API_URL;
+    const [code, setCode] = useState(0);
+    const [verifyed, setVerified] = useState(false);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         message: '',
-        targetGroup: 0
+        targetGroup: 0,
+        code: null
     });
 
     const radios = [
@@ -48,10 +51,24 @@ export function FormFields(props) {
 
     const send = (formData) => {
         console.log(formData);
-        axios.post(baseUrl + '/send/', formData)
-            .then(data => {
-                console.log(data);
+        axios.post(baseUrl + '/message/send/', formData)
+            .then(res => {
+                if (!res.data.authorized)
+                    setState(state + 1)
+                else
+                    alert("OK")
+            }).catch(err => {
+                console.log(err);
             });
+    }
+
+    const validateCode = (formData) => {
+        console.log(formData);
+        axios.post(baseUrl + '/message/verify/', { code: parseInt(formData.code), email: formData.email })
+            .then(response => setVerified(response.data.authorized))
+            .catch(err => {
+                console.log(err);
+            });;
     }
 
     let Form = () => <></>;
@@ -120,10 +137,11 @@ export function FormFields(props) {
             Form =
                 <>
                     <label className="d-block">
-                        <h2 className="from-subtitle">Verify</h2>
+                        <h2 className="from-subtitle">Verify{verifyed}</h2>
+                        <input type="number" onChange={(e) => setFormData({ ...formData, code: e.target.value })} />
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
-                    <FormButton onClick={() => setState(state + 1)} type="form-btn" label="Senden!" icon={arrow} />
+                    <FormButton onClick={() => validateCode(formData)} type="form-btn" label="Verify" icon={arrow} />
                 </>
             break;
         default:
