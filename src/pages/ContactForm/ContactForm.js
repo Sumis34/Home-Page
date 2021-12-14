@@ -141,7 +141,7 @@ export function FormFields(props) {
                         <input type="number" onChange={(e) => setFormData({ ...formData, code: e.target.value })} />
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
-                    <FormButton onClick={() => validateCode(formData)} type="form-btn" label="Verify" icon={arrow} />
+                    <FormButton onClick={() => validateCode(formData, SUCCESS_PAGE)} type="form-btn" label="Verify" icon={arrow} />
                 </>
             break;
         case 6:
@@ -158,7 +158,7 @@ export function FormFields(props) {
         default:
             Form =
                 <>
-                    <h2 className="form-topic">Zusammen kreieren wir{state}</h2>
+                    <h2 className="form-topic">Zusammen kreieren wir</h2>
                     <h1 className="from-title">
                         <Typewriter options={{
                             strings: ['Ihr Imagefilm', 'Dein Hobbyfilm', 'Ihr Werbespot', 'Ihr Wunsch!'],
