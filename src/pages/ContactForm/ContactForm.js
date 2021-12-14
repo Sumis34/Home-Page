@@ -11,6 +11,7 @@ import ValidationService from '../../services/ValidationService'
 import axios from 'axios'
 
 export function FormFields(props) {
+    const SUCCESS_PAGE = 6;
     const [state, setState] = useState(0);
     const [error, setError] = useState(false);
     const baseUrl = process.env.REACT_APP_API_URL;
@@ -33,7 +34,7 @@ export function FormFields(props) {
     ];
 
     useEffect(() => {
-        if (state > 5 || state < 0)
+        if (state > 6 || state < 0)
             setState(0);
     }, [state]);
 
@@ -49,23 +50,22 @@ export function FormFields(props) {
         }
     }
 
-    const send = (formData) => {
-        console.log(formData);
-        axios.post(baseUrl + '/message/send/', formData)
-            .then(res => {
-                if (!res.data.authorized)
-                    setState(state + 1)
-                else
-                    alert("OK")
-            }).catch(err => {
-                console.log(err);
-            });
+    const send = async (formData, success_page) => {
+        const authorized = await (await axios.post(baseUrl + '/message/send/', formData)).data.authorized
+        if (authorized)
+            setState(success_page)
+        else
+            setState(state + 1)
     }
 
-    const validateCode = (formData) => {
+    const validateCode = (formData, success_page) => {
         console.log(formData);
         axios.post(baseUrl + '/message/verify/', { code: parseInt(formData.code), email: formData.email })
-            .then(response => setVerified(response.data.authorized))
+            .then(response => {
+                setVerified(response.data.authorized);
+                console.log(verifyed);
+                send(formData, success_page);
+            })
             .catch(err => {
                 console.log(err);
             });;
@@ -130,7 +130,7 @@ export function FormFields(props) {
                         </ToggleButtonGroup>
                     </label>
                     <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
-                    <FormButton onClick={() => send(formData)} type="form-btn" label="Senden!" icon={arrow} />
+                    <FormButton onClick={() => send(formData, SUCCESS_PAGE)} type="form-btn" label="Senden!" icon={arrow} />
                 </>
             break;
         case 5:
@@ -144,10 +144,21 @@ export function FormFields(props) {
                     <FormButton onClick={() => validateCode(formData)} type="form-btn" label="Verify" icon={arrow} />
                 </>
             break;
+        case 6:
+            Form =
+                <>
+                    <label className="d-block">
+                        <h2 className="from-subtitle">Success</h2>
+                        <input type="number" onChange={(e) => setFormData({ ...formData, code: e.target.value })} />
+                    </label>
+                    <FormButton onClick={() => setState(state - 1)} type="form-btn back" icon={arrow} />
+                    <FormButton onClick={() => console.log("done")} type="form-btn" label="Close" icon={arrow} />
+                </>
+            break;
         default:
             Form =
                 <>
-                    <h2 className="form-topic">Zusammen kreieren wir</h2>
+                    <h2 className="form-topic">Zusammen kreieren wir{state}</h2>
                     <h1 className="from-title">
                         <Typewriter options={{
                             strings: ['Ihr Imagefilm', 'Dein Hobbyfilm', 'Ihr Werbespot', 'Ihr Wunsch!'],
