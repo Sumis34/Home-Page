@@ -111,6 +111,20 @@ section#about-me {
     }
 }
 
+section#tools {
+    .comparison {
+        overflow: hidden;
+        #before {
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+        }
+        .img-wrapper {
+            position: absolute;
+        }
+    }
+}
+
 @media only screen and (max-width: $screen-md) {
     section#philosophie {
         margin-top: 0;
