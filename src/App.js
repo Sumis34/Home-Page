@@ -10,7 +10,7 @@ function App() {
     const faviconUpdate = async () => {
       //grab favicon element by ID
       const favicon = document.getElementById("favicon");
-      //Check browser theme
+      //Check browser theme test
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         favicon.href = favBright;
       }
